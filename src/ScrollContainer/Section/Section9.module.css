@@ -1,4 +1,4 @@
-/* Section8.module.css */
+/* Section9.module.css */
 .section8 {
     display: flex;
     flex-direction: column;
@@ -7,35 +7,32 @@
     padding: 20px;
   }
   
-  .outcomeContainer {
-    width: 60%;
+  .outcomeContainer, .futurePlanContainer, .reflectionContainer {
+    width: 80%;
     align-self: center; /* 가운데 정렬 */
     border: 1px solid yellow; /* 레이아웃 확인용 */
     padding: 20px;
-    background-color: #f4f4f4; /* 임시 배경색 */
   }
   
-  .futurePlanContainer {
-    width: 60%;
-    align-self: center; /* 가운데 정렬 */
-    border: 1px solid yellow; /* 레이아웃 확인용 */
-    padding: 20px;
-    background-color: #f4f4f4; /* 임시 배경색 */
-  }
-  
-  .reflectionContainer {
-    width: 60%;
-    align-self: center; /* 가운데 정렬 */
-    border: 1px solid yellow; /* 레이아웃 확인용 */
-    padding: 20px;
-    background-color: #f4f4f4; /* 임시 배경색 */
-  }
-  
+  /* 폰트 크기 조절 */
   h2 {
+    font-size: 5rem; /* 소제목 글자 크기 */
     margin: 0 0 10px 0; /* 소제목 여백 */
   }
   
   p {
+    font-size: 3rem; /* 내용 글자 크기 */
     margin: 0; /* 내용 여백 */
+  }
+  
+  .reflectionContainer p {
+    font-size: 3.0rem; /* 다른 크기로 조절 가능 */
+    font-weight: 600;
+  }
+  
+  /* 강조된 단어 스타일 */
+  .highlight {
+    font-size: 5rem; /* 강조된 단어의 글자 크기 */
+    font-weight: 800;
   }
   

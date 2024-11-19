@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Section1 from './ScrollContainer/Section/Section1';
 import Section2 from './ScrollContainer/Section/Section2';
 import Section3 from './ScrollContainer/Section/Section3';
+import Section3One from './ScrollContainer/Section/Section3One';
 import Section4 from './ScrollContainer/Section/Section4';
 import Section5 from './ScrollContainer/Section/Section5';
 import Section6 from './ScrollContainer/Section/Section6';
@@ -17,6 +18,7 @@ function App() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section3One />
       <Section4 />
       <Section5 />
       <Section6 />

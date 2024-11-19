@@ -5,20 +5,32 @@ const Section7 = () => {
   return (
     <div className={styles.기술특징Section7}>
       <div className={styles.기술특징ContainerLeft}>
-        <h2>소제목 1</h2>
-        <p>내용 1</p>
+        <h2>React와 firebase 활용</h2>
+        <ul>
+          <li>React의 컴포넌트 기반 아키텍처와 Firebase의 실시간 데이터베이스를 통합하여 확장 가능한 웹 애플리케이션을 구축함.</li>
+          <li>Firebase Authentication을 활용한 사용자 인증 시스템과 Firestore를 통한 데이터 관리로 안정적인 서비스를 구축함.</li>
+        </ul>
       </div>
       <div className={styles.기술특징ContainerRight}>
-        <h2>소제목 2</h2>
-        <p>내용 2</p>
+        <h2>실시간 데이터 동기화</h2>
+        <ul>
+          <li>Firebase의 onSnapshot 리스너를 활용하여 주문 상태, 테이블 위치, 메뉴 변경 등이 실시간으로<br /> 모든 디바이스에 동기화되도록 구현함.</li>
+          <li>WebSocket 기반의 실시간 통신으로 POS와 키오스크 간의 즉각적인 데이터 업데이트를 보장함.</li>
+        </ul>
       </div>
       <div className={styles.기술특징ContainerLeft}>
-        <h2>소제목 3</h2>
-        <p>내용 3</p>
+        <h2>반응형 디자인</h2>
+        <ul>
+          <li>CSS Grid와 Flexbox를 활용하여 다양한 화면 크기에 대응하는 레이아웃을 구현했습니다.</li>
+          <li>모바일 환경에서도 최적화된 사용자 경험을 제공하도록 반응형 UI/UX를 설계했습니다.</li>
+        </ul>
       </div>
       <div className={styles.기술특징ContainerRight}>
-        <h2>소제목 4</h2>
-        <p>내용 4</p>
+        <h2>성능 최적화</h2>
+        <ul>
+          <li>React.memo와 useMemo를 활용한 불필요한 리렌더링 방지로 애플리케이션의 성능을 향상시켰습니다.</li>
+          <li>Code Splitting과 Lazy Loading을 통해 초기 로딩 시간을 최적화 시킴.</li>
+        </ul>
       </div>
     </div>
   );

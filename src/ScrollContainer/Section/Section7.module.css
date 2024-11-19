@@ -8,26 +8,32 @@
   }
   
   .기술특징ContainerLeft {
-    width: 60%;
+    width: 84%;
     align-self: flex-start; /* 왼쪽 정렬 */
     border: 1px solid yellow; /* 레이아웃 확인용 */
     padding: 20px;
-    background-color: #f4f4f4; /* 임시 배경색 */
   }
   
   .기술특징ContainerRight {
-    width: 60%;
+    width: 73%;
     align-self: flex-end; /* 오른쪽 정렬 */
     border: 1px solid yellow; /* 레이아웃 확인용 */
     padding: 20px;
-    background-color: #f4f4f4; /* 임시 배경색 */
   }
   
   h2 {
     margin: 0 0 10px 0; /* 소제목 여백 */
+    font-size: 5rem; /* 소제목 글자 크기 */
   }
   
-  p {
-    margin: 0; /* 내용 여백 */
+  ul {
+    list-style-type: disc; /* 리스트 스타일 */
+    margin: 0;
+    padding-left: 20px; /* 리스트 안쪽 여백 */
+    font-size: 2rem; /* 리스트의 글자 크기 */
+  }
+  
+  li {
+    margin-bottom: 8px; /* 리스트 항목 간의 간격 */
   }
   
