@@ -1,0 +1,14 @@
+/* Section2.module.css */
+.section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 전체 화면 높이 */
+    font-family: 'Pretendard', sans-serif; /* 전역 폰트 */
+  }
+  
+  .section4 h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  

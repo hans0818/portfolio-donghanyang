@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* 높이를 약간 줄여서 위로 올림 */
+    height: 100vh; /* 높이를 약간 줄여서 위로 올림 */
     position: relative;
   }
   

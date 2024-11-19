@@ -1,9 +1,6 @@
-
-
 .App {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
+  flex-direction: column; /* 세로로 배치 */
+  justify-content: flex-start;
+  align-items: stretch;
 }

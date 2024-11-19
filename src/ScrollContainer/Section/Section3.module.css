@@ -1,0 +1,40 @@
+/* Section3.module.css */
+.section3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 두 개의 열 */
+  grid-template-rows: auto 1fr 1fr; /* 슬로건 행과 두 개의 콘텐츠 행 */
+  gap: 20px; /* 컨테이너 간의 간격 */
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.sloganContainer {
+  grid-column: span 2; /* 두 열을 모두 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid yellow; /* 레이아웃 확인용 테두리 */
+}
+
+.sloganContainer h1 {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.problemImageContainer,
+.problemTextContainer,
+.solutionImageContainer,
+.solutionTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid yellow; /* 레이아웃 확인용 테두리 */
+  height: 100%; /* 컨테이너 높이 */
+}
+
+.highlight {
+  font-size: 5.5rem; /* "불편"의 글자 크기 */
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+/* Section8.module.css */
+.개발과정Section8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* 컨테이너 간의 간격 */
+    padding: 20px;
+  }
+  
+  .개발과정ContainerLeft {
+    width: 60%;
+    align-self: flex-start; /* 왼쪽 정렬 */
+    border: 1px solid yellow; /* 레이아웃 확인용 */
+    padding: 20px;
+    background-color: #f4f4f4; /* 임시 배경색 */
+  }
+  
+  .개발과정ContainerRight {
+    width: 60%;
+    align-self: flex-end; /* 오른쪽 정렬 */
+    border: 1px solid yellow; /* 레이아웃 확인용 */
+    padding: 20px;
+    background-color: #f4f4f4; /* 임시 배경색 */
+  }
+  
+  h2 {
+    margin: 0 0 10px 0; /* 소제목 여백 */
+  }
+  
+  p {
+    margin: 0; /* 내용 여백 */
+  }
+  
