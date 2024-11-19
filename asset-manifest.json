@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio-donghanyang/static/css/main.f855e6bc.css",
+    "main.js": "/portfolio-donghanyang/static/js/main.37418b7f.js",
+    "static/js/453.66640a8f.chunk.js": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js",
+    "index.html": "/portfolio-donghanyang/index.html",
+    "main.f855e6bc.css.map": "/portfolio-donghanyang/static/css/main.f855e6bc.css.map",
+    "main.37418b7f.js.map": "/portfolio-donghanyang/static/js/main.37418b7f.js.map",
+    "453.66640a8f.chunk.js.map": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.37418b7f.js"
+  ]
+}
