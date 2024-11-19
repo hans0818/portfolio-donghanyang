@@ -1,10 +1,11 @@
-import './App.css';
+import React from 'react';
+import styles from './App.module.css';
+import Section1 from './ScrollContainer/Section/Section1';
 
 function App() {
   return (
-    <div className="App" style={{ backgroundColor: 'navy', height: '100vh', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <h1>포트폴리오 작업중...</h1>
-      <h1>깃허브 확인용</h1>
+    <div className={styles.App}>
+      <Section1 />
     </div>
   );
 }

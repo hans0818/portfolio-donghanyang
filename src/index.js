@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './global.css'; // 전역 스타일 파일로 수정
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -11,7 +11,5 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// 앱 성능 측정을 원한다면 reportWebVitals에 함수를 전달하세요 (예: reportWebVitals(console.log))
 reportWebVitals();
