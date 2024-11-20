@@ -1,32 +1,39 @@
-/* Section1.module.css */
 .section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* 높이를 약간 줄여서 위로 올림 */
-    position: relative;
-  }
-  
-  .section1Container {
-    display: grid;
-    grid-template-rows: 1fr auto; /* 위쪽 큰 글자와 아래쪽 인포 부분 */
-    justify-items: center; /* 가로 방향으로 가운데 정렬 */
-    align-items: center; /* 세로 방향으로 가운데 정렬 */
-    width: 80vw;
-    height: 70vh;
-  }
-  
-  .section1 h1 {
-    font-size: 8rem; /* 글자 크기는 필요에 따라 조정 */
-    margin: 0;
-  }
-  
-  .info {
-    justify-self: end; /* 오른쪽 정렬 */
-    text-align: right;
-    font-size: 1.5rem;
-    color: #E8E8E8; /* 전역 글자색과 일치 */
-    width: 100%; /* 오른쪽으로 붙이기 위해 넓이 설정 */
-    margin-right: 6%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 높이를 약간 줄여서 위로 올림 */
+  position: relative;
+}
+
+.section1Container {
+  display: grid;
+  grid-template-rows: 1fr auto; /* 위쪽 큰 글자와 아래쪽 인포 부분 */
+  justify-items: center; /* 가로 방향으로 가운데 정렬 */
+  align-items: center; /* 세로 방향으로 가운데 정렬 */
+  width: 80vw;
+  height: 70vh;
+}
+
+.section1 h1 {
+  font-size: 15rem; /* 글자 크기는 필요에 따라 조정 */
+  margin: 0;
+}
+
+.info {
+  justify-self: end; /* 오른쪽 정렬 */
+  text-align: right;
+  width: 100%; /* 오른쪽으로 붙이기 위해 넓이 설정 */
+  margin-right: 6%;
+}
+
+/* 새로 추가된 스타일 */
+.name {
+  font-size: 3rem; /* 원하는 크기로 조정 */
+  font-weight: 700; /* 원하는 굵기로 조정 (예: 400, 600, 700 등) */
+}
+
+.title {
+  font-size: 1.8rem; /* 원하는 크기로 조정 */
+  font-weight: 400; /* 원하는 굵기로 조정 */
+}

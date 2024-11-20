@@ -13,15 +13,12 @@ const Section2 = () => {
         />
       </div>
       <div className={styles.experienceContainer}>
-        <h2>프로필</h2>
-        <p className={styles.highlightName}>양동한</p> {/* 글자를 크게 나타내기 위해 클래스 추가 */}
+        <span className={styles.highlightName}>양 동 한</span>
         <p>1991.08.18</p>
         <p>울산광역시 중구 학성공원 4길 49, 602호</p>
         <p>donghany0818@naver.com</p>
         <p>부경대학교 소방공학과(중퇴)</p>
-      </div>
-      <div className={styles.careerContainer}>
-        <h2>경력사항</h2>
+        <hr className={styles.divider} /> {/* 구분선 추가 */}
         <p>2018.02 ~ 2019.06 동양생명 영업팀장</p>
         <p>2019.08 ~ 2020.08 피플라이프 팀장</p>
         <p>2020.09 ~ 2024.10 굿리치 RP</p>

@@ -28,6 +28,11 @@
   text-align: center; /* 텍스트 중앙 정렬 */
 }
 
+.highlight {
+  font-size: 6rem; /* "불편"의 글자 크기 */
+  font-weight: 800;
+}
+
 .problemImageContainer,
 .solutionImageContainer {
   display: flex;
@@ -62,7 +67,13 @@
 }
 
 .problemTextContainer h2 {
-  font-size: 2.5rem; /* 큰 글자 크기 */
+  font-size: 3rem; /* 큰 글자 크기 */
+}
+
+.problemTextContainer p {
+  font-size: 2rem; /* 큰 글자 크기 */
+  color: #A0A0A0;
+  font-weight: 600;
 }
 
 .solutionTextContainer p {
@@ -71,7 +82,4 @@
   font-weight: bold;
 }
 
-.highlight {
-  font-size: 5.5rem; /* "불편"의 글자 크기 */
-  font-weight: bold;
-}
+

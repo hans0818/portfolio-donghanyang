@@ -7,8 +7,8 @@ const Section1 = () => {
       <div className={styles.section1Container}>
         <h1>portfolio</h1>
         <div className={styles.info}>
-          <p>Yang Donghan</p>
-          <p>Full Stack Developer</p>
+          <p className={styles.name}>Yang Donghan</p>
+          <p className={styles.title}>Full Stack Developer</p>
         </div>
       </div>
     </div>
