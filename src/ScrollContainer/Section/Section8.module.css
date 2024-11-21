@@ -1,23 +1,30 @@
-/* Section8.module.css */
 .개발과정Section8 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* 컨테이너 간의 간격 */
-    padding: 20px;
-  }
-  
-  .개발과정Container {
-    width: 90%; /* 너비를 90%로 변경 */
-    border: 1px solid yellow; /* 레이아웃 확인용 */
-    padding: 20px;
-  }
-  
-  h2 {
-    margin: 0 0 10px 0; /* 소제목 여백 */
-  }
-  
-  p {
-    margin: 0; /* 내용 여백 */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 섹션 간 간격 */
+  padding: 20px;
+}
+
+.개발과정Container {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px; /* 둥근 모서리 */
+}
+
+.개발과정Container p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.내용Wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 텍스트와 이미지 간 간격 */
+}
+
+.문제이미지 {
+  max-width: 200px; /* 이미지 너비 제한 */
+  height: auto;
+  border-radius: 10px; /* 둥근 모서리 */
+}

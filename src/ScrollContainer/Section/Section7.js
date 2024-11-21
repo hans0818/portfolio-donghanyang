@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Section7.module.css';
+import bulbIcon from '../../assets/images/전구.png'; // 전구 아이콘 임포트
 
 const Section7 = () => {
   return (
@@ -14,7 +15,7 @@ const Section7 = () => {
       <div className={styles.기술특징ContainerRight}>
         <h2>실시간 데이터 동기화</h2>
         <ul>
-          <li>Firebase의 onSnapshot 리스너를 활용하여 주문 상태, 테이블 위치, 메뉴 변경 등이 실시간으로<br /> 모든 디바이스에 동기화되도록 구현함.</li>
+          <li>Firebase의 onSnapshot 리스너를 활용하여 주문 상태, 테이블 위치, 메뉴 변경 등 실시간으로 모든 디바이스에 동기화되도록 구현함.</li>
           <li>WebSocket 기반의 실시간 통신으로 POS와 키오스크 간의 즉각적인 데이터 업데이트를 보장함.</li>
         </ul>
       </div>
@@ -31,6 +32,13 @@ const Section7 = () => {
           <li>React.memo와 useMemo를 활용한 불필요한 리렌더링 방지로 애플리케이션의 성능을 향상시켰습니다.</li>
           <li>Code Splitting과 Lazy Loading을 통해 초기 로딩 시간을 최적화 시킴.</li>
         </ul>
+      </div>
+      <div className={styles.핵심Container}>
+        <img src={bulbIcon} alt="Bulb Icon" className={styles.아이콘} />
+        <div className={styles.핵심텍스트}>
+          <p>이러한 기술적 특징들을 통해 사용자 경험을 개선하고</p>
+          <p>애플리케이션의 안정성과 확장성을 확보했습니다.</p>
+        </div>
       </div>
     </div>
   );

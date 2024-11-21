@@ -18,121 +18,171 @@ const Section4 = () => {
         id: 1,
         label: "음식점",
         shape: "box",
-        color: "#FFF7D6",
+        color: "#FFC0CB", // 핑크색
         x: -400,
         y: -300,
         font: {
           size: 30,
           face: "sans-serif",
-          color: "#000",
-          bold: {
-            mod: "bold",
-          },
+          color: "#333333", // 진한 글자 색상
+          mod: "bold", // 글자 굵게
         },
         widthConstraint: { minimum: 150 },
         heightConstraint: { minimum: 100 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
       {
         id: 3,
         label: "POS",
         shape: "box",
-        color: "#EDC239",
+        color: "#D8BFD8", // 연보라색
         x: 0,
         y: -300,
         font: {
           size: 30,
           face: "sans-serif",
-          color: "#000",
-          bold: {
-            mod: "bold",
-          },
+          color: "#333333",
+          mod: "bold",
         },
         widthConstraint: { minimum: 150 },
         heightConstraint: { minimum: 100 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
       {
         id: 2,
         label: "Firebase",
         shape: "box",
-        color: "#6988FF",
+        color: "#98FB98", // 연두색
         x: 0,
         y: 0,
         font: {
           size: 45,
           face: "sans-serif",
-          color: "#000",
-            bold: {
-            mod: "bold",
-          },
+          color: "#333333",
+          mod: "bold",
         },
         widthConstraint: { minimum: 250 },
         heightConstraint: { minimum: 150 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
       {
         id: 7,
         label: "KIOSK",
         shape: "box",
-        color: "#EDC239",
+        color: "#D8BFD8", // 연보라색
         x: 0,
         y: 300,
         font: {
           size: 30,
           face: "sans-serif",
-          color: "#000",
-          bold: {
-            mod: "bold",
-          },
+          color: "#333333",
+          mod: "bold",
         },
         widthConstraint: { minimum: 150 },
         heightConstraint: { minimum: 100 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
       {
         id: 4,
         label: "NFC",
         shape: "box",
-        color: "#F1F1E6",
+        color: "#FFC0CB", // 핑크색
         x: 400,
         y: -300,
         font: {
           size: 30,
           face: "sans-serif",
-          color: "#000",
-          bold: {
-            mod: "bold",
-          },
+          color: "#333333",
+          mod: "bold",
         },
         widthConstraint: { minimum: 150 },
         heightConstraint: { minimum: 100 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
       {
         id: 8,
         label: "휴대폰",
         shape: "box",
-        color: "#FFF7D6",
+        color: "#FFC0CB", // 핑크색
         x: 400,
         y: 300,
         font: {
           size: 30,
           face: "sans-serif",
-          color: "#000",
-          bold: {
-            mod: "bold",
-          },
+          color: "#333333",
+          mod: "bold",
         },
         widthConstraint: { minimum: 150 },
         heightConstraint: { minimum: 100 },
+        shapeProperties: {
+          borderRadius: 20,
+        },
       },
     ]);
 
     // 엣지 데이터 설정
     const edges = new DataSet([
-      { id: 1, from: 1, to: 3, arrows: "to" },
-      { id: 2, from: 2, to: 3, arrows: "to, from" },
-      { id: 3, from: 4, to: 8, arrows: "to" },
-      { id: 4, from: 8, to: 7, arrows: "to" },
-      { id: 5, from: 2, to: 7, arrows: "to, from" },
-      { id: 6, from: 3, to: 4, arrows: "to" }, // POS에서 NFC로 가는 화살표 추가
+      {
+        id: 1,
+        from: 1,
+        to: 3,
+        arrows: "to",
+        label: "pos 데이터 제작",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
+      {
+        id: 2,
+        from: 2,
+        to: 3,
+        arrows: "to, from",
+        label: "pos 데이터 전달\n주문 데이터 전달",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
+      {
+        id: 3,
+        from: 4,
+        to: 8,
+        arrows: "to",
+        label: "테이블 데이터 전달",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
+      {
+        id: 4,
+        from: 8,
+        to: 7,
+        arrows: "to",
+        label: "실행",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
+      {
+        id: 5,
+        from: 2,
+        to: 7,
+        arrows: "to, from",
+        label: "주문 데이터 전달\n데이터로 키오스크 렌더링",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
+      {
+        id: 6,
+        from: 3,
+        to: 4,
+        arrows: "to",
+        label: "키오스크 URL 전달",
+        font: { color: "#DEDEDE", size: 18, bold: true, strokeWidth: 0 },
+      },
     ]);
+    
+
 
     const data = {
       nodes: nodes,
@@ -147,11 +197,11 @@ const Section4 = () => {
         randomSeed: 42,
       },
       interaction: {
-        dragNodes: false,
+        dragNodes: true, // 노드 드래그 허용
         dragView: false,
         zoomView: false,
         selectable: false,
-        hover: false,
+        hover: true, // 마우스 호버 기능 활성화
       },
       manipulation: {
         enabled: false,
@@ -178,6 +228,18 @@ const Section4 = () => {
 
     const initializeNetwork = () => {
       network = new Network(container, data, options);
+
+      // 노드의 원래 위치와 스타일 저장
+      const originalPositions = {};
+      const originalStyles = {};
+      nodes.forEach((node) => {
+        originalPositions[node.id] = { x: node.x, y: node.y };
+        originalStyles[node.id] = {
+          color: node.color,
+          font: { ...node.font },
+          size: node.size || 25,
+        };
+      });
 
       // 애니메이션 관련 변수 설정
       const edgeIds = edges.getIds();
@@ -243,7 +305,9 @@ const Section4 = () => {
             if (bidirectionalEdges.includes(id)) {
               const reverseProgress = reverseAnimationProgress[id];
               const reversePoint1 = edge.edgeType.getPoint(reverseProgress);
-              const reversePoint2 = edge.edgeType.getPoint(reverseProgress - 0.01);
+              const reversePoint2 = edge.edgeType.getPoint(
+                reverseProgress - 0.01
+              );
 
               drawArrow(
                 ctx,
@@ -311,6 +375,56 @@ const Section4 = () => {
         animate(ctx);
       });
 
+      // 'dragEnd' 이벤트 핸들러 추가
+      network.on("dragEnd", (params) => {
+        params.nodes.forEach((nodeId) => {
+          const originalPosition = originalPositions[nodeId];
+          if (originalPosition) {
+            nodes.update({
+              id: nodeId,
+              x: originalPosition.x,
+              y: originalPosition.y,
+            });
+          }
+        });
+      });
+
+      // 'hoverNode' 이벤트 핸들러 추가
+      network.on("hoverNode", (params) => {
+        const nodeId = params.node;
+        const node = nodes.get(nodeId);
+
+        // 노드의 스타일 변경 (예: 크기 증가, 테두리 색상 변경)
+        nodes.update({
+          id: nodeId,
+          font: { ...node.font, size: node.font.size + 5 },
+          borderWidth: 3,
+          borderWidthSelected: 3,
+          color: {
+            ...node.color,
+            border: "#DEDEDE", 
+          },
+        });
+      });
+
+      // 'blurNode' 이벤트 핸들러 추가
+      network.on("blurNode", (params) => {
+        const nodeId = params.node;
+        const originalStyle = originalStyles[nodeId];
+
+        // 노드의 스타일을 원래대로 복구
+        nodes.update({
+          id: nodeId,
+          font: originalStyle.font,
+          borderWidth: 1,
+          borderWidthSelected: 2,
+          color: {
+            ...originalStyle.color,
+            border: undefined,
+          },
+        });
+      });
+
       // 애니메이션 시작
       updateAnimation();
     };
@@ -321,6 +435,9 @@ const Section4 = () => {
     return () => {
       if (network) {
         network.off("afterDrawing", animate);
+        network.off("dragEnd");
+        network.off("hoverNode");
+        network.off("blurNode");
         network.destroy();
       }
       if (animationFrameId) {
