@@ -1,10 +1,337 @@
-import React from 'react';
-import styles from './Section4.module.css';
+import React, { useEffect, useRef } from "react";
+import { Network } from "vis-network";
+import { DataSet } from "vis-data";
+import styles from "./Section4.module.css";
 
 const Section4 = () => {
+  const diagramContainer = useRef(null);
+
+  useEffect(() => {
+    const container = diagramContainer.current;
+    let network = null;
+    let animationFrameId = null;
+    let animate = null; // 상위 스코프에 'animate' 변수 선언
+
+    // 노드 데이터 설정
+    const nodes = new DataSet([
+      {
+        id: 1,
+        label: "음식점",
+        shape: "box",
+        color: "#FFF7D6",
+        x: -400,
+        y: -300,
+        font: {
+          size: 30,
+          face: "sans-serif",
+          color: "#000",
+          bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 150 },
+        heightConstraint: { minimum: 100 },
+      },
+      {
+        id: 3,
+        label: "POS",
+        shape: "box",
+        color: "#EDC239",
+        x: 0,
+        y: -300,
+        font: {
+          size: 30,
+          face: "sans-serif",
+          color: "#000",
+          bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 150 },
+        heightConstraint: { minimum: 100 },
+      },
+      {
+        id: 2,
+        label: "Firebase",
+        shape: "box",
+        color: "#6988FF",
+        x: 0,
+        y: 0,
+        font: {
+          size: 45,
+          face: "sans-serif",
+          color: "#000",
+            bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 250 },
+        heightConstraint: { minimum: 150 },
+      },
+      {
+        id: 7,
+        label: "KIOSK",
+        shape: "box",
+        color: "#EDC239",
+        x: 0,
+        y: 300,
+        font: {
+          size: 30,
+          face: "sans-serif",
+          color: "#000",
+          bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 150 },
+        heightConstraint: { minimum: 100 },
+      },
+      {
+        id: 4,
+        label: "NFC",
+        shape: "box",
+        color: "#F1F1E6",
+        x: 400,
+        y: -300,
+        font: {
+          size: 30,
+          face: "sans-serif",
+          color: "#000",
+          bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 150 },
+        heightConstraint: { minimum: 100 },
+      },
+      {
+        id: 8,
+        label: "휴대폰",
+        shape: "box",
+        color: "#FFF7D6",
+        x: 400,
+        y: 300,
+        font: {
+          size: 30,
+          face: "sans-serif",
+          color: "#000",
+          bold: {
+            mod: "bold",
+          },
+        },
+        widthConstraint: { minimum: 150 },
+        heightConstraint: { minimum: 100 },
+      },
+    ]);
+
+    // 엣지 데이터 설정
+    const edges = new DataSet([
+      { id: 1, from: 1, to: 3, arrows: "to" },
+      { id: 2, from: 2, to: 3, arrows: "to, from" },
+      { id: 3, from: 4, to: 8, arrows: "to" },
+      { id: 4, from: 8, to: 7, arrows: "to" },
+      { id: 5, from: 2, to: 7, arrows: "to, from" },
+      { id: 6, from: 3, to: 4, arrows: "to" }, // POS에서 NFC로 가는 화살표 추가
+    ]);
+
+    const data = {
+      nodes: nodes,
+      edges: edges,
+    };
+
+    const options = {
+      physics: {
+        enabled: false,
+      },
+      layout: {
+        randomSeed: 42,
+      },
+      interaction: {
+        dragNodes: false,
+        dragView: false,
+        zoomView: false,
+        selectable: false,
+        hover: false,
+      },
+      manipulation: {
+        enabled: false,
+      },
+      edges: {
+        width: 6,
+        smooth: {
+          type: "cubicBezier",
+          forceDirection: "horizontal",
+          roundness: 0.4,
+        },
+        color: {
+          color: "#696969", // 짙은 회색
+          highlight: "#696969",
+          hover: "#696969",
+          inherit: false,
+        },
+        arrows: {
+          to: { enabled: true, scaleFactor: 2 },
+          from: { enabled: true, scaleFactor: 2 },
+        },
+      },
+    };
+
+    const initializeNetwork = () => {
+      network = new Network(container, data, options);
+
+      // 애니메이션 관련 변수 설정
+      const edgeIds = edges.getIds();
+      let animationProgress = {};
+      let reverseAnimationProgress = {};
+
+      // 양방향 엣지 식별
+      const bidirectionalEdges = [2, 5]; // 양방향 엣지의 ID 목록
+
+      edgeIds.forEach((id) => {
+        animationProgress[id] = 0;
+        if (bidirectionalEdges.includes(id)) {
+          reverseAnimationProgress[id] = 1; // 반대 방향 진행 상태 초기화
+        }
+      });
+
+      // 애니메이션 진행 상태 업데이트 함수
+      const updateAnimation = () => {
+        if (!network) return;
+
+        edgeIds.forEach((id) => {
+          animationProgress[id] += 0.005; // 속도를 느리게 하기 위해 증가값을 줄임
+          if (animationProgress[id] > 1) {
+            animationProgress[id] = 0;
+          }
+
+          if (bidirectionalEdges.includes(id)) {
+            reverseAnimationProgress[id] -= 0.005;
+            if (reverseAnimationProgress[id] < 0) {
+              reverseAnimationProgress[id] = 1;
+            }
+          }
+        });
+
+        network.redraw();
+        animationFrameId = requestAnimationFrame(updateAnimation);
+      };
+
+      // 'animate' 함수 정의 및 상위 스코프에 할당
+      animate = (ctx) => {
+        ctx.save();
+        // 애니메이션 화살표 그리기
+        edgeIds.forEach((id) => {
+          const edge = network.body.edges[id];
+          if (edge) {
+            const progress = animationProgress[id];
+            const point1 = edge.edgeType.getPoint(progress);
+            const point2 = edge.edgeType.getPoint(progress + 0.01);
+
+            // 움직이는 화살표 그리기 (파스텔 톤 색상 적용)
+            drawArrow(
+              ctx,
+              point1.x,
+              point1.y,
+              point2.x,
+              point2.y,
+              bidirectionalEdges.includes(id) ? "#FFB6C1" : "#87CEFA", // 파스텔톤 색상
+              6, // 선 두께
+              20 // 화살촉 길이
+            );
+
+            // 양방향 엣지의 경우 반대 방향 화살표 추가
+            if (bidirectionalEdges.includes(id)) {
+              const reverseProgress = reverseAnimationProgress[id];
+              const reversePoint1 = edge.edgeType.getPoint(reverseProgress);
+              const reversePoint2 = edge.edgeType.getPoint(reverseProgress - 0.01);
+
+              drawArrow(
+                ctx,
+                reversePoint1.x,
+                reversePoint1.y,
+                reversePoint2.x,
+                reversePoint2.y,
+                "#FFDAB9", // 다른 파스텔톤 색상
+                4, // 선 두께
+                15 // 화살촉 길이
+              );
+            }
+          }
+        });
+        ctx.restore();
+
+        // 노드 다시 그리기
+        Object.values(network.body.nodes).forEach((node) => {
+          node.draw(ctx);
+        });
+      };
+
+      // 화살표 그리기 함수
+      const drawArrow = (
+        ctx,
+        fromX,
+        fromY,
+        toX,
+        toY,
+        color,
+        lineWidth = 2,
+        headlen = 10
+      ) => {
+        const angle = Math.atan2(toY - fromY, toX - fromX);
+
+        ctx.beginPath();
+        ctx.moveTo(fromX, fromY);
+        ctx.lineTo(toX, toY);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = lineWidth;
+        ctx.stroke();
+
+        // 화살촉 그리기
+        ctx.beginPath();
+        ctx.moveTo(toX, toY);
+        ctx.lineTo(
+          toX - headlen * Math.cos(angle - Math.PI / 6),
+          toY - headlen * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.lineTo(
+          toX - headlen * Math.cos(angle + Math.PI / 6),
+          toY - headlen * Math.sin(angle + Math.PI / 6)
+        );
+        ctx.lineTo(toX, toY);
+        ctx.lineTo(
+          toX - headlen * Math.cos(angle - Math.PI / 6),
+          toY - headlen * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.fillStyle = color;
+        ctx.fill();
+      };
+
+      // 'afterDrawing' 이벤트 등록
+      network.on("afterDrawing", (ctx) => {
+        animate(ctx);
+      });
+
+      // 애니메이션 시작
+      updateAnimation();
+    };
+
+    initializeNetwork();
+
+    // 컴포넌트 언마운트 시 정리 작업
+    return () => {
+      if (network) {
+        network.off("afterDrawing", animate);
+        network.destroy();
+      }
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, []);
+
   return (
     <div className={styles.section4}>
-      <h1>시스템구조</h1>
+      <div ref={diagramContainer} className={styles.diagramContainer}></div>
     </div>
   );
 };

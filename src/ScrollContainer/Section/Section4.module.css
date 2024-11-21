@@ -1,14 +1,16 @@
-/* Section2.module.css */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
 .section4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* 전체 화면 높이 */
-    font-family: 'Pretendard', sans-serif; /* 전역 폰트 */
-  }
-  
-  .section4 h1 {
-    font-size: 4rem;
-    margin: 0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 전체 화면 높이 */
+  font-family: 'Pretendard', sans-serif; /* 전역 폰트 */
+}
+
+.diagramContainer {
+  width: 90%; /* 다이어그램의 너비 */
+  height: 90%; /* 다이어그램의 높이 */
+  border: 1px solid yellow; /* 외곽선 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}

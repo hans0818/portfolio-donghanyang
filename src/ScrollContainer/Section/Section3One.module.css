@@ -42,7 +42,7 @@
   .stackBox {
     display: flex;
     flex-direction: column; /* 수직 정렬 */
-    justify-content: center; /* 세로 가운데 정렬 */
+    justify-content: flex-start; /* 글자를 위쪽으로 정렬 */
     align-items: center;
     border: 5px solid #5E5E5E; /* 연한 회색 테두리 */
     padding: 10px 20px;
