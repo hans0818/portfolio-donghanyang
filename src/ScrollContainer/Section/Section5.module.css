@@ -6,6 +6,7 @@
   padding: 20px;
   border: 1px solid yellow; /* 레이아웃 확인용 */
   height: auto; /* 자동 높이 설정 */
+  padding: 0 10%;
 }
 
 .posImageContainer {
@@ -13,7 +14,6 @@
   grid-template-columns: repeat(2, 1fr); /* 2열 구성 */
   gap: 20px; /* 컨테이너 간의 간격 */
   width: 100%;
-  max-width: 1200px; /* 최대 너비 */
   margin-bottom: 20px; /* 아래 여백 */
 }
 

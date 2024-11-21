@@ -2,8 +2,8 @@
 
 body, html {
   margin: 0;
-  padding: 0;
   height: 100%;
+  width: 100%;
   background-color: #070824; /* 배경색 */
   color: #DEDEDE; /* 글자색 */
   font-family: 'Pretendard', sans-serif; /* 폰트 */

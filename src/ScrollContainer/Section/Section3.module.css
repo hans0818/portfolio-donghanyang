@@ -5,7 +5,7 @@
   grid-template-rows: auto 1fr 1fr; /* 슬로건 행과 두 개의 콘텐츠 행 */
   gap: 20px; /* 컨테이너 간의 간격 */
   height: 100%; /* 높이를 자동으로 조정 */
-  padding: 20px;
+  padding: 0 10%; /* 위, 아래는 0, 좌우는 10% */
   font-family: 'Pretendard', sans-serif;
   border: 1px solid white; /* 레이아웃 확인용 */
   overflow: hidden; /* 페이지 밖으로 넘치는 것을 방지 */
@@ -26,11 +26,6 @@
   margin: 0;
   line-height: 1.5;
   text-align: center; /* 텍스트 중앙 정렬 */
-}
-
-.highlight {
-  font-size: 6rem; /* "불편"의 글자 크기 */
-  font-weight: 800;
 }
 
 .problemImageContainer,
@@ -68,12 +63,13 @@
 
 .problemTextContainer h2 {
   font-size: 3rem; /* 큰 글자 크기 */
+  font-weight: 800;
 }
 
 .problemTextContainer p {
   font-size: 2rem; /* 큰 글자 크기 */
   color: #A0A0A0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .solutionTextContainer p {

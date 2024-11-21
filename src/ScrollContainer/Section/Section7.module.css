@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px; /* 컨테이너 간의 간격 */
-  padding: 20px;
+  padding: 0 10%;
 }
 
 .기술특징ContainerLeft {

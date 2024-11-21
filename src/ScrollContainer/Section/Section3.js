@@ -9,7 +9,7 @@ const Section3 = () => {
       <div className={styles.sloganContainer}>
         <h1>
           스마트폰이 나와서 편리해졌는데<br />
-          왜 <span className={styles.highlight}>불편</span>해졌을까?
+          왜 불편해졌을까?
         </h1>
       </div>
       <div className={styles.problemImageContainer}>

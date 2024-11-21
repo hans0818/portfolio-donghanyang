@@ -11,7 +11,6 @@ import Section7 from './ScrollContainer/Section/Section7';
 import Section8 from './ScrollContainer/Section/Section8';
 import Section9 from './ScrollContainer/Section/Section9';
 import Section10 from './ScrollContainer/Section/Section10';
-
 function App() {
   return (
     <div className={styles.App}>
