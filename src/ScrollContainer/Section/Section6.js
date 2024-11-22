@@ -10,31 +10,43 @@ import kioskOrderComplete from '../../assets/images/키오스크 주문완료.jp
 const Section6 = () => {
   return (
     <div className={styles.kioskSection6}>
-      <h1>KIOSK 화면요소</h1>
-      <div className={styles.kioskImageContainer}>
-        <div className={styles.kioskImageBox}>
-          <img src={kioskMain} alt="KIOSK MAIN" />
-          <p>KIOSK MAIN</p>
-        </div>
-        <div className={styles.kioskImageBox}>
-          <img src={kioskBeverage} alt="KIOSK BEVERAGE" />
-          <p>KIOSK BEVERAGE</p>
-        </div>
-        <div className={styles.kioskImageBox}>
-          <img src={kioskPreviousOrder} alt="KIOSK PREVIOUS ORDER" />
-          <p>KIOSK PREVIOUS ORDER</p>
-        </div>
-        <div className={styles.kioskImageBox}>
-          <img src={kioskOptionOrder} alt="KIOSK OPTION ORDER" />
-          <p>KIOSK OPTION ORDER</p>
-        </div>
-        <div className={styles.kioskImageBox}>
-          <img src={kioskOrderComplete} alt="KIOSK ORDER COMPLETE" />
-          <p>KIOSK ORDER COMPLETE</p>
-        </div>
+      <div className={styles.kioskTitleContainer}>
+        <h1 className={styles.kioskTitle}>KIOSK 화면요소</h1>
       </div>
-      <div className={styles.kioskVideoContainer}>
-        동영상 추가 컨테이너
+
+      <div className={styles.kioskHorizontalScroll}>
+        <div className={styles.kioskImageContainer}>
+          <div className={styles.kioskImageBox}>
+            <img src={kioskMain} alt="KIOSK MAIN" />
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK MAIN</p>
+            </div>
+          </div>
+          <div className={styles.kioskImageBox}>
+            <img src={kioskBeverage} alt="KIOSK BEVERAGE" />
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK BEVERAGE</p>
+            </div>
+          </div>
+          <div className={styles.kioskImageBox}>
+            <img src={kioskPreviousOrder} alt="KIOSK PREVIOUS ORDER" />
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK PREVIOUS ORDER</p>
+            </div>
+          </div>
+          <div className={styles.kioskImageBox}>
+            <img src={kioskOptionOrder} alt="KIOSK OPTION ORDER" />
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK OPTION ORDER</p>
+            </div>
+          </div>
+          <div className={styles.kioskImageBox}>
+            <img src={kioskOrderComplete} alt="KIOSK ORDER COMPLETE" />
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK ORDER COMPLETE</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

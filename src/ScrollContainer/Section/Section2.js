@@ -59,7 +59,7 @@ const Section2 = () => {
         end: 'bottom bottom',
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       },
     });
 

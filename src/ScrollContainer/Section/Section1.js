@@ -29,7 +29,7 @@ const Section1 = () => {
         end: 'bottom bottom',
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       },
     });
 

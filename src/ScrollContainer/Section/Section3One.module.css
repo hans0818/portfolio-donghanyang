@@ -4,11 +4,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 20px;
-    height: auto;
-    padding: 0 10%;
+    gap: 50px;
+    height: 200vh;
+    padding: 10%;
     font-family: 'Pretendard', sans-serif;
-    border: 2px solid white;
     height: 100vh;
   }
   
@@ -19,7 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellow;
     height: 30%;
   }
 

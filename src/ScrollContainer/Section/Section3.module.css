@@ -4,10 +4,8 @@
   grid-template-columns: 3fr 7fr; /* 사진 컨테이너 3, 텍스트 컨테이너 7 */
   grid-template-rows: auto 1fr 1fr; /* 슬로건 행과 두 개의 콘텐츠 행 */
   gap: 20px; /* 컨테이너 간의 간격 */
-  height: 100%; /* 높이를 자동으로 조정 */
-  padding: 0 10%; /* 위, 아래는 0, 좌우는 10% */
-  font-family: 'Pretendard', sans-serif;
-  border: 1px solid white; /* 레이아웃 확인용 */
+  height: 150vh; /* 높이를 자동으로 조정 */
+  padding: 5% 10%; /* 위, 아래는 0, 좌우는 10% */
   overflow: hidden; /* 페이지 밖으로 넘치는 것을 방지 */
   box-sizing: border-box; /* 패딩 포함 */
 }
@@ -17,15 +15,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow; /* 레이아웃 확인용 테두리 */
   padding: 10px; /* 콘텐츠 여백 */
 }
 
-.sloganContainer h1 {
+.sloganContainer p {
   font-size: 4rem;
   margin: 0;
   line-height: 1.5;
   text-align: center; /* 텍스트 중앙 정렬 */
+  font-weight: 700;
+}
+
+.highlight {
+  font-size: 4rem; /* "불편"의 글자 크기 */
+  font-weight: 700;
 }
 
 .problemImageContainer,
@@ -33,7 +36,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow; /* 레이아웃 확인용 테두리 */
   padding: 10px; /* 콘텐츠 여백 */
   overflow: hidden; /* 넘치는 부분 숨기기 */
 }
@@ -43,6 +45,7 @@
   max-width: 100%; /* 이미지의 최대 너비 */
   height: auto; /* 이미지의 자동 높이 */
   object-fit: contain; /* 이미지가 컨테이너 내에 맞도록 조정 */
+  border-radius: 40px;
 }
 
 .problemTextContainer,
@@ -51,7 +54,6 @@
   flex-direction: column;
   justify-content: center; /* 중앙 정렬 */
   align-items: flex-start;
-  border: 1px solid yellow; /* 레이아웃 확인용 테두리 */
   padding: 15px; /* 콘텐츠 여백 */
   overflow: hidden; /* 넘치는 부분 숨기기 */
 }
@@ -73,7 +75,7 @@
 }
 
 .solutionTextContainer p {
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1.4; /* 텍스트 간격 조정 */
   font-weight: bold;
 }
