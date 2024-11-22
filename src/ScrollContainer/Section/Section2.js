@@ -95,7 +95,7 @@ const Section2 = () => {
         </div>
         <div className={styles.experienceContainer}>
           <div className={styles.nameContainer}>
-            <span className={styles.highlightName}>양 동 한</span>
+            <span className={styles.highlightName}>양동한 은</span>
           </div>
  
             <Section2Content isIntroduction={false} ref={careerRef} />

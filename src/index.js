@@ -6,9 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // StrictMode 제거
+  <App />
 );
 
 // 앱 성능 측정을 원한다면 reportWebVitals에 함수를 전달하세요 (예: reportWebVitals(console.log))

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Network } from "vis-network";
 import { DataSet } from "vis-data";
 import styles from "./Section4.module.css";
-import firebaseImage from '../../assets/icons/데이터.png';
 
 const Section4 = () => {
   const diagramContainer = useRef(null);
@@ -55,10 +54,9 @@ const Section4 = () => {
       },
       {
         id: 2,
-        label: "",
-        shape: "image",
-        image: firebaseImage,
-        size: 100,
+        label: "Firebase",
+        shape: "box",
+        color: "#98FB98", // 연두색
         x: 0,
         y: 0,
         font: {
@@ -67,16 +65,10 @@ const Section4 = () => {
           color: "#333333",
           mod: "bold",
         },
-        borderWidth: 3,
-        borderWidthSelected: 5,
-        brokenImage: undefined,
-        chosen: true,
         widthConstraint: { minimum: 250 },
         heightConstraint: { minimum: 150 },
         shapeProperties: {
-          useBorderWithImage: true,
-          borderRadius: 30,
-          interpolation: true,
+          borderRadius: 20,
         },
       },
       {
