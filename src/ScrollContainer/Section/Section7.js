@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import styles from './Section7.module.css';
-import bulbIcon from '../../assets/images/bulb.png'; // 파일명을 영어로 변경
+import bulbIcon from '../../assets/images/bulb.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -66,10 +66,9 @@ const Section7 = () => {
     }
   }, []);
 
-
   return (
     <div className={styles.techFeaturesSection}>
-      <div ref={leftRef1} className={styles.techFeaturesContainerLeft}>
+      <div ref={leftRef1} className={styles.techFeaturesContainerLeft} data-direction="left">
         <h2>React와 firebase 활용</h2>
         <ul>
           <li>
@@ -80,7 +79,7 @@ const Section7 = () => {
           </li>
         </ul>
       </div>
-      <div ref={rightRef1} className={styles.techFeaturesContainerRight}>
+      <div ref={rightRef1} className={styles.techFeaturesContainerRight} data-direction="right">
         <h2>실시간 데이터 동기화</h2>
         <ul>
           <li>
@@ -91,7 +90,7 @@ const Section7 = () => {
           </li>
         </ul>
       </div>
-      <div ref={leftRef2} className={styles.techFeaturesContainerLeft}>
+      <div ref={leftRef2} className={styles.techFeaturesContainerLeft} data-direction="left">
         <h2>반응형 디자인</h2>
         <ul>
           <li>
@@ -102,7 +101,7 @@ const Section7 = () => {
           </li>
         </ul>
       </div>
-      <div ref={rightRef2} className={styles.techFeaturesContainerRight}>
+      <div ref={rightRef2} className={styles.techFeaturesContainerRight} data-direction="right">
         <h2>성능 최적화</h2>
         <ul>
           <li>
@@ -111,7 +110,7 @@ const Section7 = () => {
           <li>Code Splitting과 Lazy Loading을 통해 초기 로딩 시간을 최적화 시킴.</li>
         </ul>
       </div>
-      <div ref={coreRef} className={styles.coreContainer}>
+      <div ref={coreRef} className={styles.coreContainer} data-direction="center">
         <img src={bulbIcon} alt="Bulb Icon" className={styles.icon} />
         <div className={styles.coreText}>
           <p>이러한 기술적 특징들을 통해 사용자 경험을 개선하고</p>
