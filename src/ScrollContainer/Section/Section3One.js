@@ -18,16 +18,33 @@ const Section3One = () => {
   const sectionRef = useRef(null);
   const developmentPeriodRef = useRef(null);
   const stackBoxRefs = useRef([]);
+  const projectNameRef = useRef(null); // 'OrderIn' 글자 레퍼런스 추가
 
   useEffect(() => {
     if (
       !sectionRef.current ||
       !developmentPeriodRef.current ||
-      stackBoxRefs.current.length === 0
+      stackBoxRefs.current.length === 0 ||
+      !projectNameRef.current
     ) {
       console.error('필요한 참조가 초기화되지 않았습니다.');
       return;
     }
+
+    // 'OrderIn' 글자에 부드러운 글로우 효과 애니메이션 적용
+    gsap.to(projectNameRef.current, {
+      textShadow: '0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5)',
+      duration: 1,
+      ease: 'power1.inOut',
+      repeat: -1,
+      yoyo: true,
+      scrollTrigger: {
+        trigger: projectNameRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+        markers: false,
+      },
+    });
 
     // 개발 시작 텍스트 애니메이션
     gsap.fromTo(
@@ -50,39 +67,41 @@ const Section3One = () => {
       }
     );
 
-    // stackBox 요소들 애니메이션
-    stackBoxRefs.current.forEach((box, index) => {
-      gsap.fromTo(
-        box,
-        {
-          y: 50,
-          opacity: 0,
+    // 스택 박스 요소들 애니메이션 (stagger 적용)
+    gsap.fromTo(
+      stackBoxRefs.current,
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power3.out',
+        stagger: 0.2, // 각 요소가 0.2초 간격으로 나타남
+        scrollTrigger: {
+          trigger: stackBoxRefs.current[0],
+          start: 'top 90%',
+          toggleActions: 'play reverse play reverse',
+          markers: false,
         },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.5,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: box,
-            start: 'top 90%',
-            toggleActions: 'play reverse play reverse',
-            markers: false
-          },
-        }
-      );
-    });
+      }
+    );
   }, []);
 
   return (
     <div className={styles.section3One} ref={sectionRef}>
       <div className={styles.projectNameContainer}>
-        <h1>OrderIn</h1>
+        <h1 ref={projectNameRef} className={styles.projectName}>
+          OrderIn
+        </h1>
       </div>
       <div className={styles.developmentPeriodContainer} ref={developmentPeriodRef}>
         <p>개발시작 2024-08-01</p>
       </div>
       <div className={styles.developmentStackContainer}>
+        {/* 스택 박스들 */}
         <div
           className={styles.stackBox}
           ref={(el) => {
@@ -134,7 +153,5 @@ const Section3One = () => {
     </div>
   );
 };
-
-   
 
 export default Section3One;

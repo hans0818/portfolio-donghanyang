@@ -114,7 +114,7 @@ const Section7 = () => {
         <img src={bulbIcon} alt="Bulb Icon" className={styles.icon} />
         <div className={styles.coreText}>
           <p>이러한 기술적 특징들을 통해 사용자 경험을 개선하고</p>
-          <p>애플리케이션의 안정성과 확장성을 확보했습니다.</p>
+          <p>애플리케이션의 <span className={styles.highlight}>안정성과 확장성</span>을 확보했습니다.</p>
         </div>
       </div>
     </div>

@@ -1,83 +1,95 @@
 /* Section3.module.css */
 .section3 {
-  display: grid;
-  grid-template-columns: 3fr 7fr; /* 사진 컨테이너 3, 텍스트 컨테이너 7 */
-  grid-template-rows: auto 1fr 1fr; /* 슬로건 행과 두 개의 콘텐츠 행 */
-  gap: 20px; /* 컨테이너 간의 간격 */
-  height: 150vh; /* 높이를 자동으로 조정 */
-  padding: 5% 10%; /* 위, 아래는 0, 좌우는 10% */
-  overflow: hidden; /* 페이지 밖으로 넘치는 것을 방지 */
-  box-sizing: border-box; /* 패딩 포함 */
+  display: flex;
+  flex-direction: column;
+  height: 220vh; /* 섹션 높이 220vh로 수정 */
+  padding: 0 10%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .sloganContainer {
-  grid-column: span 2; /* 두 열을 모두 차지 */
+  flex: 0 0 80vh; /* 상단 80% */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* 콘텐츠 여백 */
+  position: relative; /* 애니메이션을 위한 상대 위치 */
 }
 
 .sloganContainer p {
-  font-size: 4rem;
+  font-size: 7rem;
   margin: 0;
   line-height: 1.5;
-  text-align: center; /* 텍스트 중앙 정렬 */
+  text-align: center;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .highlight {
-  font-size: 4rem; /* "불편"의 글자 크기 */
+  font-size: 6rem; /* 애니메이션 시작 폰트 크기와 일치 */
   font-weight: 700;
 }
 
-.problemImageContainer,
-.solutionImageContainer {
+.problemContainer,
+.solutionContainer {
+  flex: 0 0 60vh; /* 각 컨테이너가 60vh 차지 */
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 10px; /* 콘텐츠 여백 */
-  overflow: hidden; /* 넘치는 부분 숨기기 */
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
+.problemImageContainer,
+.solutionImageContainer,
+.problemTextContainer,
+.solutionTextContainer {
+  flex: 1;
+  padding: 10px;
+}
+
+/* 이미지 스타일 */
 .problemImage,
 .solutionImage {
-  max-width: 100%; /* 이미지의 최대 너비 */
-  height: auto; /* 이미지의 자동 높이 */
-  object-fit: contain; /* 이미지가 컨테이너 내에 맞도록 조정 */
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
   border-radius: 40px;
 }
 
-.problemTextContainer,
-.solutionTextContainer {
+/* 텍스트 스타일 */
+.problemTextContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 중앙 정렬 */
-  align-items: flex-start;
-  padding: 15px; /* 콘텐츠 여백 */
-  overflow: hidden; /* 넘치는 부분 숨기기 */
-}
-
-.problemTextContainer h2,
-.solutionTextContainer p {
-  margin: 5px 0; /* 텍스트 간격 */
+  justify-content: center;
 }
 
 .problemTextContainer h2 {
-  font-size: 3rem; /* 큰 글자 크기 */
+  font-size: 3rem;
   font-weight: 800;
+  margin: 5px 0;
 }
 
 .problemTextContainer p {
-  font-size: 2rem; /* 큰 글자 크기 */
+  font-size: 2rem;
   color: #A0A0A0;
   font-weight: 500;
+  margin: 5px 0;
+}
+
+.solutionTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .solutionTextContainer p {
-  font-size: 3.5rem;
-  line-height: 1.4; /* 텍스트 간격 조정 */
-  font-weight: bold;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 5px 0;
 }
 
-
+.emphasize {
+  color: #ffffff; /* 흰색으로 강조 */
+}

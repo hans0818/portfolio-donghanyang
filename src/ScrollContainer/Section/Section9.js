@@ -41,7 +41,7 @@ const Section9 = () => {
                 trigger: container.ref,
                 start: 'top 80%',
                 toggleActions: 'play none none reverse',
-                markers: true,
+                markers: false,
               },
             }
           );

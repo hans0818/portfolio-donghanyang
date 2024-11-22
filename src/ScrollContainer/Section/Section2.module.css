@@ -26,9 +26,9 @@
 
 .profileImage {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: contain;
-  max-width: 500px;
+
   aspect-ratio: 1 / 1;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -45,19 +45,19 @@
 
 .nameContainer {
   height: auto;
-  padding: 10px 0;
+  padding: 5% 0;
   text-align: left;
   width: 100%;
   box-sizing: border-box;
 }
 
 .highlightName {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 800;
 }
 
 .divider {
-  width: 100%;
+  width: 45%;
   border: none;
   border-top: 3px solid #636363;
   margin: 20px 0;
@@ -89,6 +89,6 @@
 
 .highlight {
   font-weight: 800; /* 굵게 강조 */
-  font-size: 4rem;
+  font-size: 2.3rem;
   color: #ffffff;
 }
