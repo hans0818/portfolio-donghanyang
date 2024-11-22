@@ -28,11 +28,11 @@ const Section5 = () => {
       scrollTrigger: {
         trigger: section,
         start: 'top top',
-        end: () => `+=800vh`, // 섹션 높이에 맞춰 end 값 설정
+        end: () => `+=900vh`, // 섹션 높이에 맞춰 end 값 설정
         scrub: 1, // scrub 값을 1로 설정하여 스크롤과 애니메이션의 동기화를 부드럽게 함
         pin: true,
         anticipatePin: 1,
-        markers: true, // 디버깅용 마커 (프로덕션에서는 false로 설정)
+        markers: false, // 디버깅용 마커 (프로덕션에서는 false로 설정)
       },
     });
 

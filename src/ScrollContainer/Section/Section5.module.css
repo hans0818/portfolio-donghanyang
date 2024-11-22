@@ -3,32 +3,28 @@
 .posSection5 {
   position: relative;
   padding: 0 10%;
-  border: 1px solid yellow; /* 레이아웃 확인용 */
   height: 200vh; /* 높이를 600vh로 증가 */
 }
 
 .posTitleContainer {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 80%;
   text-align: center;
-  padding: 20px 0; /* 상단 여백 추가 */
-  border: 1px solid yellow; /* 디버깅용 테두리 */
   z-index: 2; /* 이미지 컨테이너보다 위에 표시 */
+  border: 1px solid red;
 }
 
 .posTitle {
   font-size: 2rem;
-  color: #ffffff;
 }
 
 .posHorizontalScroll {
-  position: fixed; /* 고정 위치 */
+  position: absolute; /* 고정 위치 */
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden; /* 네이티브 스크롤바 숨김 */
-  border: 1px solid rgb(199, 145, 145); /* 디버깅용 테두리 */
   z-index: 1; /* 제목보다 아래에 표시 */
   padding: 5% 10%;
 }
@@ -43,7 +39,6 @@
 }
 
 .posImageBox {
-  border: 1px solid yellow;
   width: 60vw; /* 상대 단위 사용 */
   flex-shrink: 0; /* 축소 방지 */
   display: flex;
@@ -51,7 +46,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
 }
 
 .posImageBox img {
@@ -59,14 +53,13 @@
   height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
+  border-radius: 50px;
 }
 
 .posTextContainer {
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  border: 1px solid yellow;
 }
 
 .posTextContainer p {

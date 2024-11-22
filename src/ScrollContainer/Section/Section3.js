@@ -82,7 +82,7 @@ const Section3 = () => {
         <img src={phoneImage} alt="해결 사진" className={styles.solutionImage} />
       </div>
       <div className={styles.solutionTextContainer} ref={solutionTextContainerRef}>
-        <p>주변에 익숙한 도구로<br />사용자 친환경적인 UI를 만들어보자.</p>
+        <p>주변에 익숙한 도구로<br />사용자 중심 UI를 제작.</p>
       </div>
     </div>
   );
