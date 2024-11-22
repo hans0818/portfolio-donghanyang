@@ -12,7 +12,6 @@
   width: 80%;
   text-align: center;
   z-index: 2; /* 이미지 컨테이너보다 위에 표시 */
-  border: 1px solid red;
 }
 
 .posTitle {

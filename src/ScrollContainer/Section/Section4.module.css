@@ -7,11 +7,13 @@
   height: 100vh; /* 전체 화면 높이 */
   font-family: 'Pretendard', sans-serif; /* 전역 폰트 */
   padding: 0 10%;
+  background-color: #202020;
 }
 
 .diagramContainer {
   width: 90%; /* 다이어그램의 너비 */
   height: 90%; /* 다이어그램의 높이 */
-  border: 1px solid yellow; /* 외곽선 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  background-color: black;
+  border-radius: 100px;
 }

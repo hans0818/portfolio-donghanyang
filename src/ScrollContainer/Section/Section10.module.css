@@ -1,36 +1,33 @@
-/* Section10.module.css */
 .lastSection10 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 0 10%;
-  }
-  
-  .lastContainer {
-    width: 80vw;
-    height: 70vh;
-  }
-  
-  .lastThanksContainer {
-    text-align: center;
-    margin-bottom: 20px; /* 연락처 컨테이너와의 간격 */
-  }
-  
-  .lastThanksContainer h1 {
-    margin: 0;
-    font-size: 7rem; /* "감사합니다." 글자 크기 */
-  }
-  
-  .lastContactContainer {
-    text-align: right; /* 오른쪽 정렬 */
-    width: 100%; /* 전체 너비 사용 */
-    margin-top: 30%; /* 연락처 컨테이너를 아래로 내리기 위한 여백 */
-  }
-  
-  .lastContactContainer p {
-    margin: 0; /* 문단 간 여백 제거 */
-    font-size: 1.8rem; /* 글자 크기 */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 화면 가운데 정렬 */
+  height: 100vh;
+  padding: 0 10%;
+}
+
+.lastContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 글자를 중앙에 정렬 */
+  width: 80vw;
+  height: 70vh;
+}
+
+.lastThanksContainer {
+  text-align: center;
+}
+
+.lastThanksContainer h1 {
+  margin: 0;
+  font-size: 7rem; /* "감사합니다." 글자 크기 */
+  color: #DEDEDE; /* 기본 글자 색 */
+}
+
+/* "가치" 글자 강조 */
+.highlight {
+  color: #ffffff; /* 하얀색 강조 */
+  font-size: 11rem;
+  font-weight: bold; /* 굵게 강조 */
+}

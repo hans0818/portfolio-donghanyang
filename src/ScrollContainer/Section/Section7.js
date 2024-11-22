@@ -39,7 +39,7 @@ const Section7 = () => {
             trigger: elem,
             start: 'top 80%',
             toggleActions: 'play reverse play reverse',
-            markers: true,
+            markers: false,
           },
         }
       );
@@ -59,7 +59,7 @@ const Section7 = () => {
             trigger: coreRef.current,
             start: 'top 80%',
             toggleActions: 'play reverse play reverse',
-            markers: true,
+            markers: false,
           },
         }
       );

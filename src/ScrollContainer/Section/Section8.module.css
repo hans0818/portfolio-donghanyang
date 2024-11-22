@@ -1,30 +1,46 @@
-.개발과정Section8 {
+.developmentSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* 섹션 간 간격 */
-  padding: 0 10%;
+  gap: 50px; /* 섹션 간 간격 */
+  padding: 5% 10%;
+  height: 180vh;
+  background-color: #202020;
 }
 
-.개발과정Container {
+.developmentContainer {
   width: 80%;
   padding: 20px;
-  border-radius: 10px; /* 둥근 모서리 */
+  border-radius: 100px; /* 둥근 모서리 */
+  background-color: black;
+  padding: 5%;
 }
 
-.개발과정Container p {
-  font-size: 2rem;
-  font-weight: 500;
+.developmentContainer h2 {
+  margin-bottom: 4%; /* 제목과 내용 간 간격 */
+  color: white;
 }
 
-.내용Wrapper {
+.developmentContainer p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #999999;
+}
+
+.contentWrapper {
   display: flex;
   align-items: center;
-  gap: 20px; /* 텍스트와 이미지 간 간격 */
+  gap: 5%; /* 텍스트와 이미지 간 간격 */
 }
 
-.문제이미지 {
-  max-width: 200px; /* 이미지 너비 제한 */
+.problemImage {
+  max-width: 15%; /* 이미지 너비 제한 */
   height: auto;
-  border-radius: 10px; /* 둥근 모서리 */
+  border-radius: 20px; /* 둥근 모서리 */
 }
+
+.emphasis {
+  font-weight: bold; /* 텍스트 굵게 */
+  color: white; /* 강조 색상 (오렌지) */
+}
+

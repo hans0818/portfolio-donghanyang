@@ -4,7 +4,7 @@ body, html {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: #010111; /* 배경색 */
+  background-color: #000003; /* 배경색 */
   color: #DEDEDE; /* 글자색 */
   font-family: 'Pretendard', sans-serif; /* 폰트 */
 }

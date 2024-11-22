@@ -1,38 +1,65 @@
-/* Section9.module.css */
-.section8 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* 컨테이너 간의 간격 */
-    padding: 0 10%;
-  }
-  
-  .outcomeContainer, .futurePlanContainer, .reflectionContainer {
-    width: 80%;
-    align-self: center; /* 가운데 정렬 */
-    border: 1px solid yellow; /* 레이아웃 확인용 */
-    padding: 20px;
-  }
-  
-  /* 폰트 크기 조절 */
-  h2 {
-    font-size: 5rem; /* 소제목 글자 크기 */
-    margin: 0 0 10px 0; /* 소제목 여백 */
-  }
-  
-  p {
-    font-size: 3rem; /* 내용 글자 크기 */
-    margin: 0; /* 내용 여백 */
-  }
-  
-  .reflectionContainer p {
-    font-size: 3.0rem; /* 다른 크기로 조절 가능 */
-    font-weight: 600;
-  }
-  
-  /* 강조된 단어 스타일 */
-  .highlight {
-    font-size: 5rem; /* 강조된 단어의 글자 크기 */
-    font-weight: 800;
-  }
-  
+.section9 {
+  display: grid; /* 그리드 레이아웃 사용 */
+  grid-template-columns: 1fr 1fr; /* 두 개의 열로 구성 */
+  grid-template-rows: auto auto; /* 행 자동 크기 조정 */
+  gap: 50px; /* 컨테이너 간의 간격 */
+  padding: 5% 10%;
+  height: 130vh;
+  background-color: #202020;
+  box-sizing: border-box; /* 섹션 전체에도 패딩 포함 */
+}
+
+.outcomeContainer {
+  width: 100%; /* 그리드 칸에 맞게 조정 */
+  padding: 7%;
+  background-color: black;
+  border-radius: 100px;
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+}
+
+.futurePlanContainer {
+  width: 100%; /* 그리드 칸에 맞게 조정 */
+  padding: 7%;
+  background-color: black;
+  border-radius: 100px;
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+}
+
+.reflectionContainer {
+  grid-column: 1 / span 2; /* 두 열을 차지 */
+  width: 100%; /* 두 열의 너비에 맞춤 */
+  padding: 5%;
+  background-color: black;
+  border-radius: 100px;
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+}
+
+/* 폰트 크기 조절 */
+h2 {
+  font-size: 4rem; /* 소제목 글자 크기 */
+  margin: 0 0 10px 0; /* 소제목 여백 */
+}
+
+p {
+  font-size: 3rem; /* 내용 글자 크기 */
+  margin: 0; /* 내용 여백 */
+  font-weight: 600;
+  color: #999999;
+}
+
+.reflectionContainer p {
+  font-size: 3.0rem; /* 다른 크기로 조절 가능 */
+  font-weight: 600;
+  color: #999999;
+}
+
+/* 강조된 단어 스타일 */
+.highlight {
+  color: #ffffff; /* 하얀색 글자 */
+  font-weight: bold; /* 강조된 텍스트 굵게 */
+}
+
+/* 강조된 단어 중 '왜' 스타일 */
+.large {
+  font-size: 5rem; /* 크기를 키운 강조 텍스트 */
+}
