@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio-donghanyang/static/css/main.dc98a3ea.css",
-    "main.js": "/portfolio-donghanyang/static/js/main.107c03f5.js",
+    "main.css": "/portfolio-donghanyang/static/css/main.7086a13b.css",
+    "main.js": "/portfolio-donghanyang/static/js/main.d4a57d4c.js",
     "static/js/453.1fcd16fa.chunk.js": "/portfolio-donghanyang/static/js/453.1fcd16fa.chunk.js",
     "static/media/donghanImage.png": "/portfolio-donghanyang/static/media/donghanImage.b8c0f78c1a8135a86adc.png",
     "static/media/시스템 시연영상.mp4": "/portfolio-donghanyang/static/media/시스템 시연영상.18584aa336d8ce72ada0.mp4",
     "static/media/키오스크 시연영상.mp4": "/portfolio-donghanyang/static/media/키오스크 시연영상.610b342e04fe4d55b1e0.mp4",
+    "static/media/tree.webp": "/portfolio-donghanyang/static/media/tree.686d2d97e9231f51e72b.webp",
     "static/media/휴대폰.webp": "/portfolio-donghanyang/static/media/휴대폰.5eaffd342e0cea1199af.webp",
     "static/media/테블릿키오스크.webp": "/portfolio-donghanyang/static/media/테블릿키오스크.0c704dffb0f8a23da646.webp",
     "static/media/키오스크 메뉴사진.jpg": "/portfolio-donghanyang/static/media/키오스크 메뉴사진.67abc602d1378a66158b.jpg",
@@ -35,12 +36,12 @@
     "static/media/figma.svg": "/portfolio-donghanyang/static/media/figma.a4046172414947aa90e66a2783cd386e.svg",
     "static/media/openai.svg": "/portfolio-donghanyang/static/media/openai.3040c1fa215529d2f81d27464c49008d.svg",
     "index.html": "/portfolio-donghanyang/index.html",
-    "main.dc98a3ea.css.map": "/portfolio-donghanyang/static/css/main.dc98a3ea.css.map",
-    "main.107c03f5.js.map": "/portfolio-donghanyang/static/js/main.107c03f5.js.map",
+    "main.7086a13b.css.map": "/portfolio-donghanyang/static/css/main.7086a13b.css.map",
+    "main.d4a57d4c.js.map": "/portfolio-donghanyang/static/js/main.d4a57d4c.js.map",
     "453.1fcd16fa.chunk.js.map": "/portfolio-donghanyang/static/js/453.1fcd16fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc98a3ea.css",
-    "static/js/main.107c03f5.js"
+    "static/css/main.7086a13b.css",
+    "static/js/main.d4a57d4c.js"
   ]
 }
