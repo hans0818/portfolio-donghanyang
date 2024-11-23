@@ -95,15 +95,15 @@ const Section2 = () => {
         </div>
         <div className={styles.experienceContainer}>
           <div className={styles.nameContainer}>
-            <span className={styles.highlightName}>양동한 은</span>
+            <span className={styles.highlightName}>양동한</span>
+            <span className={styles.smallText}> 은</span>
           </div>
- 
-            <Section2Content isIntroduction={false} ref={careerRef} />
-            <Section2Content isIntroduction={true} ref={introRef} />
-          </div>
+
+          <Section2Content isIntroduction={false} ref={careerRef} />
+          <Section2Content isIntroduction={true} ref={introRef} />
+        </div>
       </div>
     </div>
-  
   );
 };
 

@@ -134,7 +134,7 @@ const Section6 = () => {
                 <p>
                   데이터에 사이즈, 맛, 토핑 항목이 있으면 <br />{' '}
                   데이터에 유무에 따라 버튼이 렌더링됩니다. <br />
-                  <br /> 데이터를 저장하는 공간이 아닌 <br /> <span className={styles.highlight}>사용자 경험을 향상 시키기 위한 공간</span><br />
+                  <br /> <span className={styles.highlight}>정말 필요한 정보에 집중</span>하여 <br /> 불필요한 정보를 최대한 줄이는 방향<br />
                   으로 디자인 했습니다.
                 </p>
               </div>

@@ -3,13 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #202020;
+  background: linear-gradient(to bottom, #000003 20%, #202020 50%, #000003 80%);
 }
 
 .diagramContainer {
   width: 80%;
   height: 90%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 100px;
   display: flex;
   justify-content: center;

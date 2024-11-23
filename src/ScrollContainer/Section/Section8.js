@@ -52,7 +52,7 @@ const Section8 = () => {
             반응형 디자인을 만들 때 뷰포트는 항상 어려웠습니다. <br />
             포기하지 않고 유튜브, 구글링으로 해당 문제 원인을 파악하고 <br />
             rootmargin 값을 수정하여 문제를 해결했습니다.<br />
-            <span className={styles.emphasis}>향후 css, 레이아웃 관련 문제 해결</span>하는데 향후 많은 도움을 받았습니다.
+            이번 문제 해결로 <span className={styles.emphasis}> css, 레이아웃을 이해</span>하게 되었습니다.
           </p>
         </div>
       </div>
@@ -69,8 +69,9 @@ const Section8 = () => {
           />
           <p>
             Firebase의 경우 독학을 해야 하는 상황이라서 어려움이 많았습니다. <br />
-            다행히 공식문서가 잘 되어 있어서 쉽게 따라갈 수 있었고 <br />
-            <span className={styles.emphasis}>실시간</span>으로 연결하는 아키텍처를 구상할 수 있었습니다.
+            다행히 공식문서가 잘 되어 있어서 쉽게 따라갈 수 있었습니다. <br />
+            어떠한 문제가 발생하더라도 해결해 나갈 수 있으며<br />
+            <span className={styles.emphasis}>필요한 정보를 찾아내는 능력</span>을 기를 수 있었습니다.
           </p>
         </div>
       </div>

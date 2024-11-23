@@ -20,10 +20,10 @@ const Section3 = () => {
       return;
     }
 
-    // "불편" 단어 애니메이션 수정
+    // "불편" 단어 애니메이션 유지
     gsap.fromTo(
       highlightRef.current,
-      { fontSize: '6rem', fontWeight: 700 },
+      { fontSize: '7rem', fontWeight: 700 },
       {
         fontSize: '9rem',
         fontWeight: 800,
@@ -38,9 +38,8 @@ const Section3 = () => {
       }
     );
 
-    // 솔루션 컨테이너 애니메이션 (Glow Animation 적용)
+    // 솔루션 컨테이너 나타나는 애니메이션만 유지
     if (solutionContainerRef.current) {
-      // 솔루션 컨테이너 나타남 애니메이션
       gsap.fromTo(
         solutionContainerRef.current,
         { opacity: 0 },
@@ -56,46 +55,6 @@ const Section3 = () => {
           },
         }
       );
-
-      // 텍스트에 Glow Animation 적용
-      if (solutionTextRef.current) {
-        gsap.fromTo(
-          solutionTextRef.current,
-          { textShadow: '0px 0px 0px rgba(255, 255, 255, 0)' },
-          {
-            textShadow: '0px 0px 20px rgba(255, 255, 255, 1)',
-            duration: 0.5,
-            ease: 'power1.inOut',
-            repeat: -1,
-            yoyo: true,
-            scrollTrigger: {
-              trigger: solutionContainerRef.current,
-              start: 'top 80%',
-              markers: false,
-            },
-          }
-        );
-      }
-
-      // 이미지에 Glow Animation 적용
-      if (solutionImageRef.current) {
-        gsap.fromTo(
-          solutionImageRef.current,
-          { boxShadow: '0px 0px 0px rgba(255, 255, 255, 0)' },
-          {
-            boxShadow: '0px 0px 30px rgba(255, 255, 255, 1)',
-            duration: 0.5,
-            ease: 'power1.inOut',
-            repeat: -1,
-            yoyo: true,
-            scrollTrigger: {
-              trigger: solutionContainerRef.current,
-              start: 'top 80%',
-              markers: false,
-            },
-          }
-        );
-      }
     }
   }, []);
 

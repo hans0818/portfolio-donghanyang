@@ -62,7 +62,7 @@
     background-color: transparent; /* 투명 배경 */
     text-align: center; /* 텍스트 정렬 */
     flex: 1; /* 각 박스의 균일한 너비 */
-    margin: 0 5px; /* 각 박스 간의 간격 */
+    margin: 0 1%; /* 각 박스 간의 간격 */
     height: 100%;
     font-size: 2rem; /* 각 스택 박스의 글자 크기 */
     font-weight: 700;

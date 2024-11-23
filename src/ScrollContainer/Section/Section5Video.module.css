@@ -1,24 +1,80 @@
-/* 전체 화면을 관리하는 스타일 */
-.section6VideoWrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: pink;
-    overflow: hidden; /* 화면 밖 요소 숨김 */
-    z-index: 5000;
+.section5VideoWrapper {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+}
+
+.videoSection {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+
+.video {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.textGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1:1 비율로 두 열 생성 */
+  gap: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.headingContainer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.heading {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.textGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.textSection1, .textSection2 {
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textSection1 p,
+.textSection2 p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .textGrid {
+    grid-template-columns: 1fr; /* 모바일에서는 한 열로 변경 */
+    gap: 20px;
   }
-  
-  /* 비디오 컨테이너 스타일 */
-  .videoContainer {
-    width: 90%; /* 화면 너비의 90% */
-    height: 90%; /* 화면 높이의 90% */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow; /* 확인용 배경색 */
-    border-radius: 10px; /* 살짝 둥근 모서리 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 가벼운 그림자 효과 */
-  }
-  
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: 800;
+}
