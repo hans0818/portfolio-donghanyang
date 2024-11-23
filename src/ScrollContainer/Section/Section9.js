@@ -71,7 +71,7 @@ const Section9 = () => {
             <h2>확장계획</h2>
             <p>
               React 코드 관리를 위해 Redux, Context API 활용, MariaDB 매출 관리, 직원 관리 시스템 제작,
-              페이지 렌더링 최적화., typeScript 적용,
+              페이지 렌더링 최적화, typeScript 적용,
             </p>
           </div>
           <div className={styles.reflectionContainer} ref={reflectionRef}>

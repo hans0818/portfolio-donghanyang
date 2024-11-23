@@ -182,10 +182,10 @@ const Section6Video = () => {
         </div>
         {/* 설명 컨테이너 */}
         <div className={styles.descriptionContainer}>
-          <div className={`${styles.descriptionheadingBox} animated-element`}>
-            <h2 ref={headingRef} className={`${styles.heading} animated-element`}>
+          <div className={styles.descriptionheadingBox}>
+            <p ref={headingRef} className={styles.heading}>
               사용자 경험에서 답을 찾다.
-            </h2>
+            </p>
           </div>
           <div className={styles.descriptionBox}>
             <p>
@@ -199,7 +199,6 @@ const Section6Video = () => {
           </div>
           <div className={styles.descriptionBox}>
             <p>
-              살면서 편리했던 어플의 기능은 살리고, 불편했던 어플의 요소는 배제했습니다. <br />
               사용자가 겪는 불편함은 단순히 안 이쁜 디자인이 아니라,<br />
               불필요한 과정에서 오는 스트레스라는 점을 느꼈습니다. <br />
               제가 생각하는 좋은 어플은, 핵심 기능만을 남기고, <br />

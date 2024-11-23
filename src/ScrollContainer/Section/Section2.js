@@ -11,15 +11,15 @@ const Section2Content = React.forwardRef(({ isIntroduction }, ref) => (
     {isIntroduction ? (
       <div className={styles.selfIntroductionContainer} ref={ref}>
         <p>
-          <span className={styles.highlight}>목표</span>가 보이면 어떻게든 도달하고<br />
-          문제가 보이면 <span className={styles.highlight}>열정</span>이 불타고<br />
-          <span className={styles.highlight}>기회</span>가 보이면 놓치지 않으며<br />
-          배움이 보이면 <span className={styles.highlight}>깊이</span> 파고들고<br />
-          <span className={styles.highlight}>성과</span>가 보이면 함께 나누고<br />
-          더 나은 길이 보이면 바로 <span className={styles.highlight}>도전</span>합니다.<br /><br />
+          목표가 보이면 어떻게든 도달하고<br />
+          문제가 보이면 열정이 불타고<br />
+          기회가 보이면 놓치지 않으며<br />
+          배움이 보이면 깊이 파고들고<br />
+          성과가 보이면 함께 나누고<br />
+          더 나은 길이 보이면 바로 도전합니다.<br /><br />
           항상 이러한 태도로 살아왔으며,<br />
           끊임없는 성장과 팀워크를 통해<br />
-          <span className={styles.highlight}>가치</span>를 더하는 개발자가 되고자 합니다.
+          <span className={styles.highlight}>가치를 더하는 개발자</span>가 되고자 합니다.
         </p>
       </div>
     ) : (

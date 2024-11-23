@@ -64,7 +64,7 @@ const Section3 = () => {
         <p>
           스마트폰이 나와서 편리해졌는데
           <br />
-          왜{' '}
+          {' '}
           <span className={styles.highlight} ref={highlightRef}>
             불편
           </span>

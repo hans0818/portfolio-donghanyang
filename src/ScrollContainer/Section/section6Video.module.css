@@ -38,32 +38,23 @@
   margin-right: 100px;
 }
 
+.descriptionheadingBox {
+  height: 100%;
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  padding: 0 0 0 0;
+  overflow: visible;
+}
+
 .descriptionBox {
-  padding: 30px;
-  border-radius: 5px;
+  padding: 2.5% 0;
+  border-radius: 0px 0;
   box-sizing: border-box; /* 패딩 포함 크기 계산 */
   max-width: 100%; /* 부모 크기 넘지 않도록 제한 */
   text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
 
-.descriptionheadingBox {
-  height: 100%;
-  box-sizing: border-box; /* 패딩 포함 크기 계산 */
-  padding: 0 0 0 4%;
-  overflow: visible;
-}
-
-
-.animated-element {
-  position: relative;
-  z-index: 1000; /* 컨테이너보다 위에 표시 */
-}
-
-
-.descriptionBox h2 {
-  font-size: 4rem;
-  box-sizing: border-box; /* 패딩 포함 크기 계산 */
-  max-width: 100%; /* 부모 크기 넘지 않도록 제한 */
+.heading {
+  font-size: 3rem;
 }
 
 .descriptionBox p {

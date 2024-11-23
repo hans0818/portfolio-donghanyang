@@ -21,7 +21,6 @@
   width: 80%;
   padding: 20px;
   border-radius: 100px; /* 둥근 모서리 */
-  background-color: black;
   padding: 5%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 애니메이션 */
 }
