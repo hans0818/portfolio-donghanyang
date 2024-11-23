@@ -1,26 +1,31 @@
 /* src/components/Tooltip/Tooltip.module.css */
 
 .tooltip {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    pointer-events: none;
-    transform: translate(-50%, -120%);
-    white-space: nowrap;
-    z-index: 1000;
-    opacity: 0.95;
-  }
-  
-  .tooltipTitle {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 800;
-  }
-  
-  .tooltipText {
-    margin: 5px 0 0;
-    font-size: 1.5rem;
-  }
-  
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1.2%;
+  border-radius: 20px;
+  pointer-events: none;
+  transform: translate(-50%, -120%);
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.visible {
+  opacity: 0.95;
+  transform: translate(-50%, -130%); /* 약간 위로 이동하여 나타나는 효과 */
+}
+
+.tooltipTitle {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.tooltipText {
+  margin: 5px 0 0;
+  font-size: 1.5rem;
+}

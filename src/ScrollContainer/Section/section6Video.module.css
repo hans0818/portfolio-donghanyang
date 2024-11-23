@@ -1,0 +1,50 @@
+/* 전체 화면을 관리하는 스타일 */
+.section6VideoWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  overflow: hidden; /* 화면 밖 요소 숨김 */
+  z-index: 5000;
+}
+
+/* 그리드 레이아웃 */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 왼쪽 2/3, 오른쪽 1/3 비율 */
+  grid-gap: 20px; /* 컬럼 간격 */
+  width: 90%;
+  height: 90%;
+}
+
+/* 비디오 컨테이너 스타일 */
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow; /* 확인용 배경색 */
+  border-radius: 10px; /* 살짝 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 가벼운 그림자 효과 */
+}
+
+/* 설명 컨테이너 스타일 */
+.descriptionContainer {
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  justify-content: space-between; /* 상하 간격 균등 배치 */
+  align-items: center;
+}
+
+/* 각 설명 박스 스타일 */
+.descriptionBox {
+  width: 100%;
+  height: 30%; /* 3개의 박스를 균등한 높이로 */
+  background-color: lightblue; /* 확인용 배경색 */
+  border-radius: 10px; /* 살짝 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 가벼운 그림자 효과 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -9,6 +9,8 @@ import kioskBeverage from '../../assets/images/키오스크 음료.jpg';
 import kioskPreviousOrder from '../../assets/images/키오스크 기본주문.jpg';
 import kioskOptionOrder from '../../assets/images/키오스크 옵션주문.jpg';
 import kioskOrderComplete from '../../assets/images/키오스크 주문완료.jpg';
+import kioskMenuPhoto from '../../assets/images/키오스크 메뉴사진.jpg'; // 새로운 이미지 추가
+import kioskOptionSelection from '../../assets/images/키오스크 옵션선택.jpg'; // 새로운 이미지 추가
 
 const Section6 = () => {
   const sectionRef = useRef(null);
@@ -55,13 +57,14 @@ const Section6 = () => {
 
       <div className={styles.kioskHorizontalScroll}>
         <div className={styles.kioskImageContainer} ref={imageContainerRef}>
-          {/* 각 이미지 박스 */}
+          {/* 기존 이미지 박스 */}
           <div className={styles.kioskImageBox}>
             <div className={styles.kioskContentGrid}>
               <img src={kioskMain} alt="KIOSK 메인" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
-                  음식을 주문할 때 가장 <span className={styles.highlight}>필요한 요소로 UI</span>를 <br />구성 했습니다.
+                  음식을 주문할 때 가장 <span className={styles.highlight}>필요한 요소로 UI</span>를 <br />
+                  구성 했습니다.
                   <br />
                   메뉴, 가격이 먼저 보여서 주문하기 <br /> 편하게 했습니다.
                 </p>
@@ -90,14 +93,32 @@ const Section6 = () => {
             </div>
           </div>
 
+          {/* 새로운 이미지 박스: KIOSK 메뉴사진 */}
+          <div className={styles.kioskImageBox}>
+            <div className={styles.kioskContentGrid}>
+              <img src={kioskMenuPhoto} alt="KIOSK 메뉴사진" loading="lazy" />
+              <div className={styles.kioskDescription}>
+                <p>
+                  UI를 구성할 때 1차 정보, 2차 정보 구분을 해서 <br />
+                  1차 정보는 먼저 렌더링 하고 <br />2차 정보는 버튼을 눌렀을 때 렌더링합니다.<br />
+                  <br /> 이미지, 텍스트 데이터가 있으면 <br /> 형관펜으로 강조를 하여 <br />
+                  <span className={styles.highlight}>사용자 경험을 향상</span> 했습니다. <br />
+                </p>
+              </div>
+            </div>
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK 메뉴사진</p>
+            </div>
+          </div>
+
           <div className={styles.kioskImageBox}>
             <div className={styles.kioskContentGrid}>
               <img src={kioskPreviousOrder} alt="KIOSK 기본주문" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
                   메뉴 스위치를 토글 스위치 컨셉으로 <br />어떤 항목을 주문 했는지 <span className={styles.highlight}>쉽게 확인</span> 할 수 있게 <br />UI구성 했습니다.
-                  <br />
-                  주문을 하면 주문 목록에 <br />어떤 항목을 주문 했는지 확인 할 수 있습니다.
+                  <br /><br />
+                  어떤 항목을 주문 했는지 확인 할 수 있습니다.
                 </p>
               </div>
             </div>
@@ -112,7 +133,9 @@ const Section6 = () => {
               <div className={styles.kioskDescription}>
                 <p>
                   데이터에 사이즈, 맛, 토핑 항목이 있으면 <br />{' '}
-                  <span className={styles.highlight}>데이터에 따라 버튼이 렌더링</span> 됩니다. <br /> 없으면 버튼이 안 보여서 <br /> 불필요한 정보를 줄였습니다.
+                  데이터에 유무에 따라 버튼이 렌더링됩니다. <br />
+                  <br /> 데이터를 저장하는 공간이 아닌 <br /> <span className={styles.highlight}>사용자 경험을 향상 시키기 위한 공간</span><br />
+                  으로 디자인 했습니다.
                 </p>
               </div>
             </div>
@@ -121,14 +144,33 @@ const Section6 = () => {
             </div>
           </div>
 
+          {/* 새로운 이미지 박스: KIOSK 옵션선택 */}
+          <div className={styles.kioskImageBox}>
+            <div className={styles.kioskContentGrid}>
+              <img src={kioskOptionSelection} alt="KIOSK 옵션선택" loading="lazy" />
+              <div className={styles.kioskDescription}>
+                <p>
+                  화면에 여러 요소가 있으면 불편 했던 경험을 바탕으로 <br />
+                  <span className={styles.highlight}>필요한 정보를 집중</span>할 수 있도록 모달을 통하여 <br />
+                  사용자 경험을 향상시킵니다.
+                </p>
+              </div>
+            </div>
+            <div className={styles.kioskTextContainer}>
+              <p>KIOSK 옵션선택</p>
+            </div>
+          </div>
+
           <div className={styles.kioskImageBox}>
             <div className={styles.kioskContentGrid}>
               <img src={kioskOrderComplete} alt="KIOSK 주문완료" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
-                  모달을 활용하여 <span className={styles.highlight}>집중도 있는 UI</span>를 구성하였습니다.
-                  <br />
-                  '주문'버튼을 누르면 POS로 <br /> 주문 데이터가 넘어가게 됩니다.
+                  가능하면 버튼 수를 많이 줄여서 <br />
+                  직관적으로 바로 버튼을 찾을 수 있게 했습니다. <br />
+                  <br /> 요소를 추가하기 보다는 <br />
+                  불필요한 요소를 제거하는데 집중하여 <br />
+                  <span className={styles.highlight}>누구나 쉽게 사용할 수 있도록</span> 디자인 했습니다.
                 </p>
               </div>
             </div>

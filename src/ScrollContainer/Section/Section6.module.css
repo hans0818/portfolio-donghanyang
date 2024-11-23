@@ -22,11 +22,10 @@
   position: absolute; /* 고정 위치 */
   top: 0;
   left: 0;
-  width: 350vw;
+  width: 460vw;
   overflow: hidden; /* 네이티브 스크롤바 숨김 */
   z-index: 1; /* 제목보다 아래에 표시 */
   padding: 5% 10%;
-  border: 3px solid red;
 }
 
 .kioskImageContainer {

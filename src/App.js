@@ -7,6 +7,7 @@ import Section3One from './ScrollContainer/Section/Section3One';
 import Section4 from './ScrollContainer/Section/Section4';
 import Section5 from './ScrollContainer/Section/Section5';
 import Section6 from './ScrollContainer/Section/Section6';
+import Section6Video from './ScrollContainer/Section/Section6Video';
 import Section7 from './ScrollContainer/Section/Section7';
 import Section8 from './ScrollContainer/Section/Section8';
 import Section9 from './ScrollContainer/Section/Section9';
@@ -21,6 +22,7 @@ function App() {
       <Section4 />
       <Section5 />
       <Section6 />
+      <Section6Video />
       <Section7 />
       <Section8 />
       <Section9 />

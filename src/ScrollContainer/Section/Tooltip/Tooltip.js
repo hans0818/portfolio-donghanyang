@@ -4,11 +4,9 @@ import ReactDOM from 'react-dom';
 import styles from './Tooltip.module.css';
 
 const Tooltip = ({ visible, x, y, title, text }) => {
-  if (!visible) return null;
-
   return ReactDOM.createPortal(
     <div
-      className={styles.tooltip}
+      className={`${styles.tooltip} ${visible ? styles.visible : ''}`}
       style={{ left: x, top: y }}
     >
       {title && <h3 className={styles.tooltipTitle}>{title}</h3>}
