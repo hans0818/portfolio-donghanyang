@@ -15,11 +15,6 @@
   color: #999999;
 }
 
-.posTitle {
-  font-size: 2rem;
-  margin-top: 5%;
-}
-
 .posHorizontalScroll {
   position: absolute; /* 고정 위치 */
   top: 0;

@@ -5,7 +5,7 @@
   gap: 40px; /* 컨테이너 간의 간격 */
   padding: 5% 10%;
   height: 200vh;
-  background-color: #202020;
+  background: linear-gradient(to bottom, #000003, #202020);
 }
 
 .techFeaturesContainerLeft {

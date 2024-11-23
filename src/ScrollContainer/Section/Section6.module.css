@@ -78,9 +78,9 @@
 
 .kioskTextContainer p {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: white;
+  color: #999999;
 }
 
 .kioskDescription {
@@ -109,6 +109,13 @@
   color: #ffffff;              /* 강조할 텍스트를 흰색으로 설정 */
   font-weight: bold;           /* 선택 사항: 강조할 텍스트를 굵게 */
 }
+
+
+.highlight {
+  color: #ffffff;
+  font-weight: 800;
+}
+
 
 /* 반응형 조정 */
 @media (max-width: 1200px) {

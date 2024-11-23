@@ -5,6 +5,7 @@
   justify-content: center; /* 화면 가운데 정렬 */
   height: 100vh;
   padding: 0 10%;
+  background: linear-gradient(to bottom, #202020, #000003);
 }
 
 .lastContainer {
@@ -21,13 +22,13 @@
 
 .lastThanksContainer h1 {
   margin: 0;
-  font-size: 7rem; /* "감사합니다." 글자 크기 */
-  color: #DEDEDE; /* 기본 글자 색 */
+  font-size: 7rem;
+  font-weight: 800;
 }
 
 /* "가치" 글자 강조 */
 .highlight {
   color: #ffffff; /* 하얀색 강조 */
-  font-size: 11rem;
-  font-weight: bold; /* 굵게 강조 */
+  font-size: 12rem;
+  font-weight: 900; /* 굵게 강조 */
 }

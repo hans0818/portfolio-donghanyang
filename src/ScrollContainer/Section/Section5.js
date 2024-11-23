@@ -97,10 +97,6 @@ const Section5 = () => {
         text={tooltip.text}
       />
 
-      <div className={styles.posTitleContainer}>
-        <h1 className={styles.posTitle}>POS 화면요소</h1>
-      </div>
-
       <div className={styles.posHorizontalScroll}>
         <div
           className={styles.posImageContainer}

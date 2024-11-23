@@ -71,3 +71,9 @@
   box-sizing: border-box; /* 패딩 포함 크기 계산 */
   max-width: 100%; /* 부모 크기 넘지 않도록 제한 */
 }
+
+
+.highlight {
+  color: #ffffff;
+  font-weight: 800;
+}

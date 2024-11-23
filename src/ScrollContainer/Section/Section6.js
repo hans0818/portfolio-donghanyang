@@ -51,10 +51,6 @@ const Section6 = () => {
 
   return (
     <div className={styles.kioskSection6} ref={sectionRef}>
-      <div className={styles.kioskTitleContainer}>
-        <h1 className={styles.kioskTitle}>KIOSK 화면요소</h1>
-      </div>
-
       <div className={styles.kioskHorizontalScroll}>
         <div className={styles.kioskImageContainer} ref={imageContainerRef}>
           {/* 기존 이미지 박스 */}
@@ -99,7 +95,7 @@ const Section6 = () => {
               <img src={kioskMenuPhoto} alt="KIOSK 메뉴사진" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
-                  UI를 구성할 때 1차 정보, 2차 정보 구분을 해서 <br />
+                  UI를 구성할 때 <span className={styles.highlight}>1차 정보, 2차 정보 구분</span>을 해서 <br />
                   1차 정보는 먼저 렌더링 하고 <br />2차 정보는 버튼을 눌렀을 때 렌더링합니다.<br />
                   <br /> 이미지, 텍스트 데이터가 있으면 <br /> 형관펜으로 강조를 하여 <br />
                   <span className={styles.highlight}>사용자 경험을 향상</span> 했습니다. <br />
@@ -116,7 +112,8 @@ const Section6 = () => {
               <img src={kioskPreviousOrder} alt="KIOSK 기본주문" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
-                  메뉴 스위치를 토글 스위치 컨셉으로 <br />어떤 항목을 주문 했는지 <span className={styles.highlight}>쉽게 확인</span> 할 수 있게 <br />UI구성 했습니다.
+                  메뉴 스위치를 토글 스위치 컨셉으로 <br />어떤 항목을 주문 했는지 
+                  <span className={styles.highlight}>쉽게 확인</span> 할 수 있게 <br />UI구성 했습니다.
                   <br /><br />
                   어떤 항목을 주문 했는지 확인 할 수 있습니다.
                 </p>
@@ -134,7 +131,8 @@ const Section6 = () => {
                 <p>
                   데이터에 사이즈, 맛, 토핑 항목이 있으면 <br />{' '}
                   데이터에 유무에 따라 버튼이 렌더링됩니다. <br />
-                  <br /> <span className={styles.highlight}>정말 필요한 정보에 집중</span>하여 <br /> 불필요한 정보를 최대한 줄이는 방향<br />
+                  <br /> <span className={styles.highlight}>정말 필요한 정보에 집중</span>하여 <br /> 
+                  불필요한 정보를 최대한 줄이는 방향<br />
                   으로 디자인 했습니다.
                 </p>
               </div>
@@ -166,7 +164,7 @@ const Section6 = () => {
               <img src={kioskOrderComplete} alt="KIOSK 주문완료" loading="lazy" />
               <div className={styles.kioskDescription}>
                 <p>
-                  가능하면 버튼 수를 많이 줄여서 <br />
+                  가능하면 <span className={styles.highlight}>버튼 수를 최소화</span>하여 <br />
                   직관적으로 바로 버튼을 찾을 수 있게 했습니다. <br />
                   <br /> 요소를 추가하기 보다는 <br />
                   불필요한 요소를 제거하는데 집중하여 <br />

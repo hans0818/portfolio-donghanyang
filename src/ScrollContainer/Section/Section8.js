@@ -38,6 +38,9 @@ const Section8 = () => {
 
   return (
     <div className={styles.developmentSection}>
+      {/* 섹션 제목 */}
+      <h1 className={styles.sectionTitle}>문제를 양분으로 피어난 성장의 꽃</h1>
+      
       {/* "뷰포트 문제(css)" 섹션 */}
       <div className={styles.developmentContainer}>
         <h2>뷰포트 문제(css)</h2>

@@ -4,9 +4,18 @@
   align-items: center;
   gap: 50px; /* 섹션 간 간격 */
   padding: 5% 10%;
-  height: 180vh;
+  height: 200vh;
   background-color: #202020;
 }
+
+.sectionTitle {
+  font-size: 4rem; /* 큰 제목 크기 */
+  font-weight: 900;
+  color: #999999;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  width : 90%;
+}
+
 
 .developmentContainer {
   width: 80%;

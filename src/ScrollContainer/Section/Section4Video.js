@@ -137,11 +137,8 @@ const Section4Video = () => {
       <div className={styles.textGrid}>
         <div className={styles.textSection1}>
           <p>
-            사용자가 즉각적으로 데이터를 확인하고 상호작용할 수 있도록, 
-            <span className={styles.highlight}> 정확하고 신뢰할 수 있는 데이터 구조 설계</span>와 
-            <span className={styles.highlight}>실시간 데이터 동기화</span>가 무엇보다 중요하다는 것을 배웠습니다. 
-            이를 통해 사용자 경험(UX)을 극대화하기 위해 데이터와 UI 간의 
-            <span className={styles.highlight}>유기적인 연결성</span>을 지속적으로 고민하며 개발하고자 합니다.
+          초기에 자바스크립트로 페이지를 제작하면서 UI를 구상하는데 한계를 많이 느꼇습니다.
+          하지만 REACT의 풍부한 라이브러리, 컴포넌트 기반 아키텍처가 UI를 구상하는데 큰 도움을 주었습니다. 
             <br /><br />
             React를 통해 UI를 <span className={styles.highlight}>작은 컴포넌트 단위로 나누고 재사용</span>할 수 있어 
             개발 속도와 유지보수성을 크게 향상시킬 수 있었습니다. 
@@ -154,9 +151,9 @@ const Section4Video = () => {
 
         <div className={styles.textSection2}>
           <p>
-            Firebase를 통해 데이터는 단순히 <span className={styles.highlight}>저장 공간의 역할을 넘어</span>, 
-            UI를 구성하는 데 있어 <span className={styles.highlight}>핵심적인 도구</span>임을 깨달았습니다. 
-            UI는 <span className={styles.highlight}>데이터를 기반으로 렌더링</span>되며, 데이터가 잘못되면 결국 실패한 UI로 이어질 수밖에 없습니다. 
+            Firebase를 통해 데이터는 단순히 저장 공간의 역할을 넘어, 
+            UI를 구성하는 데 있어 핵심적인 도구임을 깨달았습니다. 
+            UI는 데이터를 기반으로 렌더링되며, 데이터가 잘못되면 결국 실패한 UI로 이어질 수밖에 없습니다. <br /><br />
             사용자가 즉각적으로 데이터를 확인하고 상호작용할 수 있도록, <span className={styles.highlight}>정확하고 신뢰할 수 있는 데이터 구조 설계</span>와 
             <span className={styles.highlight}>실시간 데이터 동기화</span>가 무엇보다 중요하다는 것을 배웠습니다. 이를 통해 사용자 경험(UX)을 극대화하기 위해 
             데이터와 UI 간의 <span className={styles.highlight}>유기적인 연결성</span>을 지속적으로 고민하며 개발하고자 합니다.
