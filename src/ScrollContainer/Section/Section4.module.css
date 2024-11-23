@@ -3,19 +3,18 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #202020;
 }
 
 .diagramContainer {
   width: 80%;
   height: 90%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: black;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #5E5E5E;
 }
 
 svg {
@@ -24,6 +23,32 @@ svg {
 }
 
 .textStyle {
-  font-weight: 800; /* 폰트를 두껍게 */
-  fill: #ffffff; /* 텍스트 색상 */
+  font-weight: 900;
+  fill: #c4c4c4;
+  font-size: 3rem;
 }
+
+/* 라벨 위치 조정 */
+.edge-label {
+  font-size: 20px; /* 기본 폰트 크기 */
+  font-weight: normal; /* 기본 폰트 굵기 */
+  fill: rgb(151, 151, 151); /* 기본 텍스트 색상 */
+  pointer-events: none; /* 텍스트 클릭 불가능 */
+}
+
+.label-left {
+  text-anchor: end;
+}
+
+.label-right {
+  text-anchor: start;
+}
+
+.label-top {
+  dominant-baseline: hanging;
+}
+
+.label-current {
+  dominant-baseline: baseline;
+}
+

@@ -2,6 +2,7 @@
   width: 100%;
   height: 300vh; /* 두 섹션의 총 높이 */
   position: relative;
+  background-color: #000000;
 }
 
 .section1,

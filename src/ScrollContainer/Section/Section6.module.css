@@ -10,48 +10,65 @@
   width: 80%;
   text-align: center;
   z-index: 2; /* 이미지 컨테이너보다 위에 표시 */
+  color: #999999;
 }
 
 .kioskTitle {
   font-size: 2rem;
+  margin-top: 3%;
 }
 
 .kioskHorizontalScroll {
   position: absolute; /* 고정 위치 */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 350vw;
   overflow: hidden; /* 네이티브 스크롤바 숨김 */
   z-index: 1; /* 제목보다 아래에 표시 */
   padding: 5% 10%;
+  border: 3px solid red;
 }
 
 .kioskImageContainer {
   display: flex;
   flex-direction: row;
-  gap: 20px;
   align-items: center;
   height: 100%;
   will-change: transform; /* 성능 최적화를 위한 속성 */
 }
 
 .kioskImageBox {
-  width: 60vw; /* 상대 단위 사용 */
+  width: 60vw;
+  height: 80vh; /* 상대 단위 사용 */
   flex-shrink: 0; /* 축소 방지 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
 }
 
-.kioskImageBox img {
-  width: 60vw;
+.kioskContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.kioskContentGrid img {
+  width: 30vw;
   height: 70vh;
   object-fit: contain;
   display: block;
   border-radius: 50px;
+  position: relative;
+}
+
+.kioskDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .kioskTextContainer {
@@ -64,4 +81,69 @@
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
+  color: white;
+}
+
+.kioskDescription {
+  display: flex;
+  justify-content: flex-start; /* 수평 정렬: 왼쪽으로 */
+  align-items: flex-start;     /* 수직 정렬: 위쪽으로 */
+  padding: 10px;               /* 필요에 따라 패딩 추가 */
+  margin-left: -20%; /* 강제로 왼쪽으로 이동 */
+  z-index: 1;
+  width: 100%;
+}
+
+.kioskDescription p {
+  font-size: 2rem;
+  text-align: left;            /* 텍스트 왼쪽 정렬 */
+  color: #ffffff;              /* 텍스트 색상 흰색으로 설정 (강조) */
+}
+
+
+.kioskDescription p {
+  font-size: 2rem;
+  color: #999999;
+}
+
+.highlight {
+  color: #ffffff;              /* 강조할 텍스트를 흰색으로 설정 */
+  font-weight: bold;           /* 선택 사항: 강조할 텍스트를 굵게 */
+}
+
+/* 반응형 조정 */
+@media (max-width: 1200px) {
+  .kioskImageBox {
+    width: 90vw; /* 작은 화면에 맞게 너비 조정 */
+  }
+
+  .kioskTextContainer p {
+    font-size: 2rem; /* 폰트 크기 축소 */
+  }
+
+  .kioskContentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .kioskDescription {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kioskImageBox {
+    width: 100vw; /* 전체 뷰포트 너비 사용 */
+  }
+
+  .kioskTextContainer p {
+    font-size: 1.5rem; /* 추가 폰트 크기 축소 */
+  }
+
+  .kioskContentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .kioskDescription {
+    margin-top: 10px;
+  }
 }

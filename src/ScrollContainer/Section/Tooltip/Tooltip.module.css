@@ -1,0 +1,26 @@
+/* src/components/Tooltip/Tooltip.module.css */
+
+.tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(-50%, -120%);
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0.95;
+  }
+  
+  .tooltipTitle {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  
+  .tooltipText {
+    margin: 5px 0 0;
+    font-size: 1.5rem;
+  }
+  

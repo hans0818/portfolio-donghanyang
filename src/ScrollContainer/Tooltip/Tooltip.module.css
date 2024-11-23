@@ -1,0 +1,16 @@
+/* Tooltip.module.css */
+
+.tooltip {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+  z-index: 1000;
+  font-size: 14px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.9;
+}
