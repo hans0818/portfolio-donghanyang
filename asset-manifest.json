@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-donghanyang/static/css/main.c7e13fd4.css",
-    "main.js": "/portfolio-donghanyang/static/js/main.713227ef.js",
+    "main.css": "/portfolio-donghanyang/static/css/main.204ea6a7.css",
+    "main.js": "/portfolio-donghanyang/static/js/main.63f23805.js",
     "static/js/453.66640a8f.chunk.js": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js",
     "static/media/donghanImage.png": "/portfolio-donghanyang/static/media/donghanImage.b8c0f78c1a8135a86adc.png",
     "static/media/휴대폰.webp": "/portfolio-donghanyang/static/media/휴대폰.5eaffd342e0cea1199af.webp",
@@ -20,23 +20,23 @@
     "static/media/pos퀵버튼.png": "/portfolio-donghanyang/static/media/pos퀵버튼.2929e0ebc0813c7ff829.png",
     "static/media/JS.png": "/portfolio-donghanyang/static/media/JS.ddf52780fea15bd2e100.png",
     "static/media/pos회원가입.png": "/portfolio-donghanyang/static/media/pos회원가입.40d8986d911c3d2bae34.png",
-    "static/media/전구.png": "/portfolio-donghanyang/static/media/전구.22568ef4e500ca82c812.png",
+    "static/media/bulb.png": "/portfolio-donghanyang/static/media/bulb.22568ef4e500ca82c812.png",
     "static/media/vscode.png": "/portfolio-donghanyang/static/media/vscode.42dc264fde2adb74cc19.png",
     "static/media/Node.js.png": "/portfolio-donghanyang/static/media/Node.js.bc4b43cd5f20ba305059.png",
     "static/media/pos로그인.png": "/portfolio-donghanyang/static/media/pos로그인.f31afe53bba251d5ae66.png",
     "static/media/openai.png": "/portfolio-donghanyang/static/media/openai.d269933a7807a805fc58.png",
     "static/media/firebase.png": "/portfolio-donghanyang/static/media/firebase.67065ac0709cc932b5a3.png",
     "static/media/cursor.png": "/portfolio-donghanyang/static/media/cursor.46cc131279e524edfe57.png",
-    "static/media/firebase.svg": "/portfolio-donghanyang/static/media/firebase.10f745cc91acd6d77ca9ef794a88ed93.svg",
+    "static/media/firebase.svg": "/portfolio-donghanyang/static/media/firebase.538fe50440d82bb7015cf74dd3d723e6.svg",
     "static/media/figma.svg": "/portfolio-donghanyang/static/media/figma.a4046172414947aa90e66a2783cd386e.svg",
     "static/media/openai.svg": "/portfolio-donghanyang/static/media/openai.3040c1fa215529d2f81d27464c49008d.svg",
     "index.html": "/portfolio-donghanyang/index.html",
-    "main.c7e13fd4.css.map": "/portfolio-donghanyang/static/css/main.c7e13fd4.css.map",
-    "main.713227ef.js.map": "/portfolio-donghanyang/static/js/main.713227ef.js.map",
+    "main.204ea6a7.css.map": "/portfolio-donghanyang/static/css/main.204ea6a7.css.map",
+    "main.63f23805.js.map": "/portfolio-donghanyang/static/js/main.63f23805.js.map",
     "453.66640a8f.chunk.js.map": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7e13fd4.css",
-    "static/js/main.713227ef.js"
+    "static/css/main.204ea6a7.css",
+    "static/js/main.63f23805.js"
   ]
 }
