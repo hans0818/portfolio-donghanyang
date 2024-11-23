@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio-donghanyang/static/css/main.204ea6a7.css",
-    "main.js": "/portfolio-donghanyang/static/js/main.63f23805.js",
-    "static/js/453.66640a8f.chunk.js": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js",
+    "main.css": "/portfolio-donghanyang/static/css/main.dc98a3ea.css",
+    "main.js": "/portfolio-donghanyang/static/js/main.107c03f5.js",
+    "static/js/453.1fcd16fa.chunk.js": "/portfolio-donghanyang/static/js/453.1fcd16fa.chunk.js",
     "static/media/donghanImage.png": "/portfolio-donghanyang/static/media/donghanImage.b8c0f78c1a8135a86adc.png",
+    "static/media/시스템 시연영상.mp4": "/portfolio-donghanyang/static/media/시스템 시연영상.18584aa336d8ce72ada0.mp4",
+    "static/media/키오스크 시연영상.mp4": "/portfolio-donghanyang/static/media/키오스크 시연영상.610b342e04fe4d55b1e0.mp4",
     "static/media/휴대폰.webp": "/portfolio-donghanyang/static/media/휴대폰.5eaffd342e0cea1199af.webp",
     "static/media/테블릿키오스크.webp": "/portfolio-donghanyang/static/media/테블릿키오스크.0c704dffb0f8a23da646.webp",
+    "static/media/키오스크 메뉴사진.jpg": "/portfolio-donghanyang/static/media/키오스크 메뉴사진.67abc602d1378a66158b.jpg",
     "static/media/키오스크 음료.jpg": "/portfolio-donghanyang/static/media/키오스크 음료.c4f6b01ba3555e685765.jpg",
     "static/media/키오스크 메인.jpg": "/portfolio-donghanyang/static/media/키오스크 메인.445cba81f0067dd89c81.jpg",
     "static/media/키오스크 옵션주문.jpg": "/portfolio-donghanyang/static/media/키오스크 옵션주문.3f8540cc6c7c08b8f4d0.jpg",
     "static/media/notion.png": "/portfolio-donghanyang/static/media/notion.c365f286235b0c29c3be.png",
     "static/media/키오스크 기본주문.jpg": "/portfolio-donghanyang/static/media/키오스크 기본주문.54d098e3f251e18fc7f4.jpg",
+    "static/media/키오스크 옵션선택.jpg": "/portfolio-donghanyang/static/media/키오스크 옵션선택.171519bc8dd4e90d95af.jpg",
     "static/media/키오스크 주문완료.jpg": "/portfolio-donghanyang/static/media/키오스크 주문완료.1ee1be18365b315f7431.jpg",
     "static/media/pos테이블편집.png": "/portfolio-donghanyang/static/media/pos테이블편집.c3104446db9373d693bf.png",
     "static/media/pos설정.png": "/portfolio-donghanyang/static/media/pos설정.4efa1e97b9f805d45a1d.png",
@@ -31,12 +35,12 @@
     "static/media/figma.svg": "/portfolio-donghanyang/static/media/figma.a4046172414947aa90e66a2783cd386e.svg",
     "static/media/openai.svg": "/portfolio-donghanyang/static/media/openai.3040c1fa215529d2f81d27464c49008d.svg",
     "index.html": "/portfolio-donghanyang/index.html",
-    "main.204ea6a7.css.map": "/portfolio-donghanyang/static/css/main.204ea6a7.css.map",
-    "main.63f23805.js.map": "/portfolio-donghanyang/static/js/main.63f23805.js.map",
-    "453.66640a8f.chunk.js.map": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js.map"
+    "main.dc98a3ea.css.map": "/portfolio-donghanyang/static/css/main.dc98a3ea.css.map",
+    "main.107c03f5.js.map": "/portfolio-donghanyang/static/js/main.107c03f5.js.map",
+    "453.1fcd16fa.chunk.js.map": "/portfolio-donghanyang/static/js/453.1fcd16fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.204ea6a7.css",
-    "static/js/main.63f23805.js"
+    "static/css/main.dc98a3ea.css",
+    "static/js/main.107c03f5.js"
   ]
 }
