@@ -46,12 +46,10 @@
 
 .textSection1, .textSection2 {
   padding: 4%;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* 위쪽 정렬 */
   align-items: center; /* 수평 가운데 정렬 */
-  border: 1px solid #ffffff;
 }
 
 .textSection1 p,

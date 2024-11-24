@@ -21,7 +21,6 @@ const Section5Video = () => {
       controls: 1,
       rel: 0,
       modestbranding: 1,
-      origin: window.location.origin // 현재 도메인 origin 추가
     },
   };
 
@@ -106,8 +105,6 @@ const Section5Video = () => {
 
   const onPlayerReady = (event) => {
     playerRef.current = event.target; // YouTube Player 인스턴스 저장
-    // 플레이어 로드 후 즉시 음소거 설정
-    event.target.mute();
   };
 
   return (
@@ -118,8 +115,6 @@ const Section5Video = () => {
           opts={opts} 
           onReady={onPlayerReady} // Player Ready 이벤트 핸들러
           className={styles.video}
-          iframeClassName={styles.videoIframe}
-          loading="lazy" // 지연 로딩 추가
         />
       </div>
 

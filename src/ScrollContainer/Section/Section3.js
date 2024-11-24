@@ -78,14 +78,11 @@ const Section3 = () => {
           <img src={tabletKioskImage} alt="문제 사진" className={styles.problemImage} />
         </div>
         <div className={styles.problemTextContainer}>
-          <h2>접근성 문제</h2>
-          <p>: 노인, 장애인 등 익숙하지 않으면 사용하기 힘듦.</p>
-          <h2>인간적 접촉 부족</h2>
-          <p>: 직접적인 인간적인 도움을 필요로 할 때 이를 제공하기 어려움.</p>
-          <h2>기술적 문제</h2>
-          <p>: 소프트웨어 오류, 터치 스크린 문제, 네트워크 연결 불안정 등.</p>
-          <h2>청결 문제</h2>
-          <p>: 다수 사용자의 사용으로 전염병, 위생에 취약.</p>
+          <p>
+            스마트폰이 나오고 새로운 것이 생기고 기존에 없던 편리함이 생겼습니다.
+            태블릿 키오스크가 아직도 불편하다고 생각합니다.
+            키오스크가 문제가 아니라 테블릿 자체가 주는 불편함이 불편했습니다.
+          </p>
         </div>
       </div>
 
@@ -93,9 +90,10 @@ const Section3 = () => {
       <div className={styles.solutionContainer} ref={solutionContainerRef}>
         <div className={styles.solutionTextContainer} ref={solutionTextRef}>
           <p>
-            주변에 익숙한 도구로
-            <br />
-            <span className={styles.emphasize}>사용자 중심 UI</span>를 제작.
+            이번 프로젝트에서 제가 느꼇던 불편함을 개선하는 것이 목표 입니다.
+            프로그래밍에 대해서 더 깊게 이해하며 우리가 가지고 있는 익숙한 도구로 
+            기존보다 더 나은 <span className={styles.emphasize}>사용자 친화적인 UI</span>를 
+            만드는 것이 목표 입니다.
           </p>
         </div>
         <div className={styles.solutionImageContainer}>
@@ -106,6 +104,9 @@ const Section3 = () => {
             className={styles.solutionImage}
           />
         </div>
+      </div>
+      <div className={styles.summaryContainer}>
+        <p>하드웨어 불편함을 소프트웨어로 해결</p>
       </div>
     </div>
   );
