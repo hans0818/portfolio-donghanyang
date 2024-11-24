@@ -6,6 +6,7 @@
   padding: 5% 10%;
   height: 200vh;
   background: linear-gradient(to bottom, #000003, #202020);
+  z-index: 3;
 }
 
 .techFeaturesContainerLeft {
@@ -28,13 +29,13 @@
   width: 73%;
   align-self: flex-end; /* 오른쪽 정렬 */
   border-radius: 50px;
-  padding: 5%;
+  padding: 3%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 애니메이션 */
 }
 
-h2 {
-  margin: 0 0 10px 0; /* 소제목 여백 */
-  font-size: 5rem; /* 소제목 글자 크기 */
+.sectionHeader {
+  margin: 0 0 10px 0;
+  font-size: 5rem;
   color: #ffffff;
 }
 
@@ -43,7 +44,7 @@ ul {
   margin: 0;
   padding-left: 20px; /* 리스트 안쪽 여백 */
   font-size: 2rem; /* 리스트의 글자 크기 */
-  color: #DEDEDE;
+  color: #999999;
 }
 
 li {

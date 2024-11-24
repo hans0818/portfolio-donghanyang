@@ -41,7 +41,7 @@ const Section5 = () => {
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        markers: true,
+        markers: false,
       },
     });
 

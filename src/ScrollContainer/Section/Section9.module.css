@@ -6,6 +6,7 @@
   min-height: 150vh;
   background-color: #202020;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 .sectionTitle {
@@ -39,6 +40,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
   border-radius: 50px;
 }
 
@@ -53,7 +55,6 @@
 .reflectionContainer {
   width: 100%;
   padding: 5%;
-  background-color: black;
   border-radius: 50px;
   box-sizing: border-box;
 }
@@ -81,11 +82,16 @@ p {
 
 .highlight {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .large {
   font-size: 3.3rem;
+}
+
+.reflectionText {
+  font-size: 1.7rem;
+  color: #999999;
 }
 
 /* Responsive Design */

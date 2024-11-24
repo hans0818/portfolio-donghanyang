@@ -75,7 +75,7 @@ const Section9 = () => {
             </p>
           </div>
           <div className={styles.reflectionContainer} ref={reflectionRef}>
-            <p>
+            <p className={styles.reflectionText}>
               이번 프로젝트를 진행하면서 느낀 점은{' '}
               <span className={styles.highlight}>‘생각하고 실천하면 다 해결되었다’</span>는 사실입니다.
               <br />

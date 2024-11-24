@@ -3,7 +3,9 @@
 .posSection5 {
   position: relative;
   padding: 0 10%;
-  height: 200vh; /* 높이를 600vh로 증가 */
+  height: 200vh;
+  z-index: 1;
+  background: linear-gradient(to bottom, #202020, #000003);
 }
 
 .posTitleContainer {
@@ -16,12 +18,12 @@
 }
 
 .posHorizontalScroll {
-  position: absolute; /* 고정 위치 */
+  position: absolute;
   top: 0;
   left: 0;
   width: 500vw;
-  overflow: hidden; /* 네이티브 스크롤바 숨김 */
-  z-index: 1; /* 제목보다 아래에 표시 */
+  overflow: hidden;
+  z-index: 1;
   padding: 5% 10%;
   margin-top: 3%;
 }

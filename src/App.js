@@ -23,11 +23,11 @@ function App() {
       <Section3One />
       <Section4 />
       <Section4Video />
+      <Section7 />
       <Section5 />
       <Section5Video />
       <Section6 />
       <Section6Video />
-      <Section7 />
       <Section8 />
       <Section9 />
       <Section10 />

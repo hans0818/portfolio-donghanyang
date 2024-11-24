@@ -9,17 +9,19 @@ gsap.registerPlugin(ScrollTrigger);
 const Section5Video = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
+  const playerRef = useRef(null); // YouTube Player 레퍼런스
 
   // YouTube 동영상 옵션
   const opts = {
     height: '100%',
     width: '100%',
     playerVars: {
-      autoplay: 1,
+      autoplay: 0, // 자동 재생 비활성화
       mute: 1,
       controls: 1,
       rel: 0,
       modestbranding: 1,
+      origin: window.location.origin // 현재 도메인 origin 추가
     },
   };
 
@@ -76,11 +78,37 @@ const Section5Video = () => {
       markers: false,
     });
 
+    // IntersectionObserver를 사용해 비디오 제어
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && playerRef.current) {
+            playerRef.current.seekTo(0); // 영상 시작 지점으로 이동
+            playerRef.current.playVideo(); // 영상 재생
+          } else if (playerRef.current) {
+            playerRef.current.pauseVideo(); // 영상 일시정지
+          }
+        });
+      },
+      { threshold: 0.5 } // 섹션이 50% 이상 보일 때 작동
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
     return () => {
+      observer.disconnect();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       burnAndShineTimeline.kill();
     };
   }, []);
+
+  const onPlayerReady = (event) => {
+    playerRef.current = event.target; // YouTube Player 인스턴스 저장
+    // 플레이어 로드 후 즉시 음소거 설정
+    event.target.mute();
+  };
 
   return (
     <div className={styles.section5VideoWrapper} ref={sectionRef}>
@@ -88,7 +116,10 @@ const Section5Video = () => {
         <YouTube 
           videoId={videoId} 
           opts={opts} 
+          onReady={onPlayerReady} // Player Ready 이벤트 핸들러
           className={styles.video}
+          iframeClassName={styles.videoIframe}
+          loading="lazy" // 지연 로딩 추가
         />
       </div>
 
@@ -116,11 +147,11 @@ const Section5Video = () => {
             첫번째로 <span className={styles.highlight}>단순함이 주는 편리함</span> 입니다. 
             하나의 화면에 너무 많은 것을 담는 것을 피했습니다.<br />
             두번째는 사용자가<span className={styles.highlight}>경험으로 UI를 익히는 것</span>입니다. 
-            미적인 요소로 애니메이션을 넣는 것이 아니라 
+            애니메이션을 미적인 요소보다 사용자가
             경험으로 사용법을 습득할 수 있게 애니메이션을 구성했습니다.<br />
             세번째는 <span className={styles.highlight}>본질에 집중</span> 하는 것입니다. 
-            좋은 자동차는 옵션이 많은 자동차가 아니라 
-            엑셀과 브레이크 같이 자동차의 핵심적인 성능이 우선입니다.
+            좋은 자동차는 옵션이 많은 자동차가 아니라, 
+            엑셀과 브레이크 처럼 자동차의 핵심적인 성능이 우선입니다.
           </p>
         </div>
       </div>

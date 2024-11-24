@@ -67,7 +67,7 @@ const Section8 = () => {
           <img
             src={firebaseLogo}
             alt="Firebase 로고"
-            className={styles.problemImage}
+            className={styles.problemfirebaseImage}
             ref={firebaseLogoRef}
           />
           <p>

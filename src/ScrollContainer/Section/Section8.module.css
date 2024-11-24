@@ -5,7 +5,8 @@
   gap: 50px; /* 섹션 간 간격 */
   padding: 5% 10%;
   height: 200vh;
-  background-color: #202020;
+  background: linear-gradient(to bottom, #000003, #202020);
+  z-index: 3;
 }
 
 .sectionTitle {
@@ -51,6 +52,11 @@
   max-width: 15%; /* 이미지 너비 제한 */
   height: auto;
   border-radius: 20px; /* 둥근 모서리 */
+}
+
+.problemfirebaseImage {
+  max-width: 15%; /* 이미지 너비 제한 */
+  height: auto;
 }
 
 .emphasis {

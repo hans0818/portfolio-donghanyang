@@ -19,14 +19,15 @@ const Section4 = () => {
     { id: 6, label: "휴대폰", x: 550, y: -350, width: 200, height: 200, color: "#00a06a", fontSize: 30 },
   ], []);
 
-  // 엣지 데이터 메모이제이션
+  // 엣지 데이터 메모이제이션 (양방향 엣지를 단방향 엣지 두 개로 분리)
   const edges = useMemo(() => [
-    { id: 1, from: 1, to: 3, label: "pos 데이터 제작", bidirectional: false },
-    { id: 2, from: 2, to: 3, label: "pos 데이터 전달\n주문 데이터 전달", bidirectional: true },
-    { id: 3, from: 4, to: 6, label: "테이블 데이터 전달", bidirectional: false },
-    { id: 4, from: 6, to: 5, label: "실행", bidirectional: false },
-    { id: 5, from: 2, to: 5, label: "주문 데이터 전달\n데이터로 키오스크 렌더링", bidirectional: true },
-    { id: 6, from: 3, to: 4, label: "키오스크 URL 전달", bidirectional: false },
+    { id: 1, from: 1, to: 3, label: "pos 데이터 제작" }, // 단방향
+    { id: 2, from: 2, to: 3, label: "주문 데이터 전달" }, // Firebase → POS
+    { id: 8, from: 3, to: 2, label: "식당 데이터 전달" }, // POS → Firebase
+    { id: 3, from: 4, to: 6, label: "URL 데이터로 키오스크 렌더링" },
+    { id: 4, from: 6, to: 5, label: "실행" },
+    { id: 6, from: 3, to: 4, label: "키오스크 URL 전달" },
+    { id: 7, from: 5, to: 2, label: "Firebase로의 데이터 전달" }, // KIOSK → Firebase
   ], []);
 
   // SVG 마커 정의 메모이제이션
@@ -34,23 +35,13 @@ const Section4 = () => {
     <defs>
       <marker
         id="arrowhead"
-        markerWidth="5"
-        markerHeight="3.5"
-        refX="5"
-        refY="1.75"
+        markerWidth="10"
+        markerHeight="7"
+        refX="10"
+        refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 5 1.75, 0 3.5" fill="#808080" />
-      </marker>
-      <marker
-        id="reverseArrowhead"
-        markerWidth="5"
-        markerHeight="3.5"
-        refX="5"
-        refY="1.75"
-        orient="auto"
-      >
-        <polygon points="0 0, 5 1.75, 0 3.5" fill="#808080" />
+        <polygon points="0 0, 10 3.5, 0 7" fill="#808080" />
       </marker>
     </defs>
   ), []);
@@ -72,18 +63,19 @@ const Section4 = () => {
   // 라벨 위치 매핑
   const labelPositions = useMemo(() => ({
     1: ['left'], // 'pos 데이터 제작' - left
-    2: ['top', 'current'], // 'pos 데이터 전달' - top, '주문 데이터 전달' - current
-    3: ['current'], // '테이블 데이터 전달' - current
+    2: ['bottom'], // '주문 데이터 전달' - bottom
+    8: ['top'], // '식당 데이터 전달' - top
+    3: ['top'], // 'URL 데이터로 키오스크 렌더링' - top
     4: ['right'], // '실행' - right
-    5: ['current', 'top'], // '주문 데이터 전달' - current, '데이터로 키오스크 렌더링' - top
     6: ['left'], // '키오스크 URL 전달' - left
+    7: ['top'], // 'Firebase로의 데이터 전달' - top
   }), []);
 
-  // 라벨 렌더링 함수 (인라인 스타일 적용)
+  // 라벨 렌더링 함수 (중앙 정렬)
   const renderLabel = (edge, line, index) => {
     const positionClass = labelPositions[edge.id] ? labelPositions[edge.id][index] || 'current' : 'current';
 
-    // 기본 위치 계산
+    // 기본 위치 계산 (중앙)
     let x = (getNodeById(edge.from).x + getNodeById(edge.to).x) / 2;
     let y = (getNodeById(edge.from).y + getNodeById(edge.to).y) / 2;
 
@@ -98,10 +90,12 @@ const Section4 = () => {
       case 'top':
         y -= 40; // 위로 이동
         break;
+      case 'bottom':
+        y += 60; // 아래로 이동
+        break;
       case 'current':
       default:
-        y += 40; // 아래로 이동
-        break;
+        break; // 중앙에 위치
     }
 
     // 텍스트 앵커 설정
@@ -109,14 +103,13 @@ const Section4 = () => {
     if (positionClass === 'left') textAnchor = 'end';
     if (positionClass === 'right') textAnchor = 'start';
 
-    // 인라인 스타일 정의 (하이라이트 제거)
+    // 인라인 스타일 정의
     const labelStyle = {
       fontSize: '1.7rem',
-      fontWeight: 'bold', // 모든 라벨을 굵게 설정
-      fill: '#c4c4c4', // 동일한 색상
+      fontWeight: 'bold',
+      fill: '#c4c4c4',
       pointerEvents: 'none',
-      dominantBaseline: positionClass === 'top' ? 'hanging' :
-                        positionClass === 'current' ? 'baseline' : 'auto',
+      dominantBaseline: 'middle',
       textAnchor: textAnchor,
     };
 
@@ -134,145 +127,92 @@ const Section4 = () => {
 
   // 엣지 렌더링 함수
   const renderEdges = () => {
+    // 밝은 파스텔 톤 색상 정의
+    const pastelPink = "#FFB6C1"; // 밝은 파스텔 핑크
+    const pastelBlue = "#89CFF0"; // 밝은 파스텔 블루
+
     return edges.map((edge) => {
       const fromNode = getNodeById(edge.from);
       const toNode = getNodeById(edge.to);
 
       if (!fromNode || !toNode) return null;
 
-      const lineColor = "#808080"; // 선 색상
-      const edgeId = `edge-${edge.id}`; // 고유 ID
+      const edgeId = `edge-${edge.id}`;
+      const isBlueEdge = [2, 7].includes(edge.id); // Edge 2 (Firebase→POS), Edge 7 (KIOSK→Firebase) are blue
+      const arrowColor = isBlueEdge ? pastelBlue : pastelPink; // 파랑 또는 핑크 색상
 
-      const isNfcToPhone = edge.from === 4 && edge.to === 6; // NFC → 휴대폰 조건
-      const isBidirectional = edge.bidirectional;
-
-      // 화살표 개수를 다섯 개로 설정
-      const numArrowsForward = 5; // Forward 화살표 개수
-      const numArrowsReverse = isBidirectional ? 5 : 0; // Reverse 화살표 개수 (양방향일 때만)
-
-      // 애니메이션 화살표 색상 정의
-      const forwardArrowColor = isNfcToPhone ? "#BAE1FF" : "#FFB3BA";
-      const reverseArrowColor = "#BAE1FF";
-
-      if (isBidirectional) {
-        const offset = 80;
-        const { x: ox, y: oy } = calculateOffset(fromNode, toNode, offset);
-        const reverseEdgeId = `reverse-${edgeId}`;
-
-        return (
-          <g key={edge.id}>
-            {/* Forward Path */}
-            <path
-              id={edgeId}
-              d={`M ${fromNode.x},${fromNode.y} L ${toNode.x},${toNode.y}`}
-              stroke={lineColor}
-              strokeWidth="10"
-              fill="none"
-              markerEnd="url(#arrowhead)"
-            />
-            {/* Reverse Path */}
-            <path
-              id={reverseEdgeId}
-              d={`M ${toNode.x + ox},${toNode.y + oy} L ${fromNode.x + ox},${fromNode.y + oy}`}
-              stroke={lineColor}
-              strokeWidth="10"
-              fill="none"
-              markerEnd="url(#reverseArrowhead)"
-            />
-
-            {/* Forward Arrows */}
-            {[...Array(numArrowsForward)].map((_, i) => (
-              <polygon
-                key={`forward-${edge.id}-arrow-${i}`}
-                className="moving-arrow"
-                data-path={edgeId}
-                points="0 0, 20 10, 0 20"
-                fill={forwardArrowColor}
-                pointerEvents="none"
-              />
-            ))}
-
-            {/* Reverse Arrows */}
-            {[...Array(numArrowsReverse)].map((_, i) => (
-              <polygon
-                key={`reverse-${edge.id}-arrow-${i}`}
-                className="moving-arrow"
-                data-path={reverseEdgeId}
-                points="0 0, 20 10, 0 20"
-                fill={reverseArrowColor}
-                pointerEvents="none"
-              />
-            ))}
-
-            {/* 라벨 추가 */}
-            {edge.label.split("\n").map((line, index) => renderLabel(edge, line, index))}
-          </g>
-        );
-      } else {
-        return (
-          <g key={edge.id}>
-            {/* 단방향 Path */}
-            <path
-              id={edgeId}
-              d={`M ${fromNode.x},${fromNode.y} L ${toNode.x},${toNode.y}`}
-              stroke={lineColor}
-              strokeWidth="10"
-              fill="none"
-              markerEnd="url(#arrowhead)"
-            />
-            {/* Forward Arrows */}
-            {[...Array(numArrowsForward)].map((_, i) => (
-              <polygon
-                key={`forward-${edge.id}-arrow-${i}`}
-                className="moving-arrow"
-                data-path={edgeId}
-                points="0 0, 20 10, 0 20"
-                fill={forwardArrowColor}
-                pointerEvents="none"
-              />
-            ))}
-
-            {/* 라벨 추가 */}
-            {edge.label.split("\n").map((line, index) => renderLabel(edge, line, index))}
-          </g>
-        );
+      let pathD = `M ${fromNode.x},${fromNode.y} L ${toNode.x},${toNode.y}`;
+      if (edge.id === 8) {
+        // Offset Edge 8 to prevent overlap with Edge 2
+        const { x: ox, y: oy } = calculateOffset(fromNode, toNode, 20); // 20px 오프셋
+        pathD = `M ${fromNode.x + ox},${fromNode.y + oy} L ${toNode.x + ox},${toNode.y + oy}`;
       }
+
+      // Determine the number of arrows for this edge
+      const numArrows = edge.id === 3 ? 8 : 5; // Edge id 3 (NFC → 휴대폰) has 8 arrows
+
+      return (
+        <g key={edge.id}>
+          {/* Path */}
+          <path
+            id={edgeId}
+            d={pathD}
+            stroke="#808080"
+            strokeWidth="10"
+            fill="none"
+            markerEnd="url(#arrowhead)"
+          />
+
+          {/* Moving Arrows */}
+          {[...Array(numArrows)].map((_, i) => (
+            <polygon
+              key={`forward-${edge.id}-arrow-${i}`}
+              className="moving-arrow"
+              data-path={edgeId}
+              points="0 0, 20 10, 0 20"
+              fill={arrowColor}
+              pointerEvents="none"
+            />
+          ))}
+
+          {/* 라벨 추가 */}
+          {edge.label.split("\n").map((line, index) => renderLabel(edge, line, index))}
+        </g>
+      );
     });
   };
 
+  // GSAP 애니메이션
   useEffect(() => {
     const speed = 400; // 기본 속도 (픽셀/초)
-    const fastSpeed = 600; // NFC → 휴대폰 속도 (픽셀/초)
-    const numArrows = 5; // 화살표 개수
 
-    const arrows = svgRef.current.querySelectorAll(".moving-arrow");
+    edges.forEach(edge => {
+      const edgeId = `edge-${edge.id}`;
+      const path = document.getElementById(edgeId);
 
-    arrows.forEach((arrow, index) => {
-      const pathId = arrow.getAttribute("data-path");
-      const path = document.getElementById(pathId);
       if (path) {
+        const arrows = svgRef.current.querySelectorAll(`.moving-arrow[data-path="${edgeId}"]`);
         const pathLength = path.getTotalLength();
-        const isFast = pathId === "edge-3"; // edge-3은 NFC → 휴대폰
+        const numArrows = edge.id === 3 ? 8 : 5; // Edge id 3 (NFC → 휴대폰) has 8 arrows
+        const duration = pathLength / speed;
 
-        const currentSpeed = isFast ? fastSpeed : speed;
-        const duration = pathLength / currentSpeed;
+        arrows.forEach((arrow, index) => {
+          const start = index / numArrows;
+          const end = 1 + (index / numArrows);
 
-        // 화살표 간격을 경로 길이를 화살표 개수로 나눈 값으로 설정
-        const start = index / numArrows;
-        const end = 1 + (index / numArrows);
-
-        gsap.to(arrow, {
-          duration,
-          repeat: -1,
-          ease: "linear",
-          motionPath: {
-            path: path,
-            align: path,
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: start,
-            end: end,
-          },
+          gsap.to(arrow, {
+            duration,
+            repeat: -1,
+            ease: "linear",
+            motionPath: {
+              path: path,
+              align: path,
+              alignOrigin: [0.5, 0.5],
+              autoRotate: true,
+              start,
+              end,
+            },
+          });
         });
       }
     });

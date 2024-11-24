@@ -5,6 +5,7 @@
   padding: 0 10%; /* 패딩 유지 */
   height: 100vh; /* 화면 전체 높이 */
   overflow: visible; /* 혹시나 있을 설정 문제를 방지 */
+  z-index: 3;
 }
 
 .gridContainer {
@@ -21,6 +22,7 @@
   width: 100%; /* 그리드 셀 크기 맞춤 */
   max-width: 80%; /* 최대 너비 제한 */
   aspect-ratio: 11 / 19; /* 비율 유지 */
+  z-index: 9999;
 }
 
 .video {
