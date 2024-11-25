@@ -1,7 +1,7 @@
+/* src/components/Section6/Section6.module.css */
 .kioskSection6 {
   position: relative;
-  background-color: greenyellow;
-  height: calc(100vh * 7); /* 이미지 개수에 따라 높이 조절 */
+  height: 800vh;
   overflow: hidden;
 }
 
@@ -12,40 +12,48 @@
 
 .kioskImageContainer {
   width: 50%;
-  position: relative;
-  background-color: pink;
+  position: relative; /* 절대 위치를 위한 상대 위치 설정 */
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 오른쪽 정렬로 변경 */
 }
 
 .kioskImage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(20%, -50%);
+  position: absolute; /* 이미지 겹치기 */
   width: auto;
   max-width: 80%;
   height: auto;
   max-height: 80vh;
   object-fit: contain;
+  transition: opacity 1s ease, filter 1s ease;
   border-radius: 40px;
- }
+}
 
 .kioskDescriptionContainer {
   width: 50%;
+  position: relative; /* 디스크립션을 이미지 위에 표시하기 위해 설정 */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* 텍스트 수직 정렬을 위로 */
   height: 100%;
+  z-index: 10; /* 디스크립션이 이미지 위에 표시되도록 설정 */
 }
 
 .kioskDescription {
+  position: absolute; /* 디스크립션 겹치기 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
   width: 80%;
-  background-color: lightblue;
   padding: 20px;
   border-radius: 10px;
+  text-align: left;
+  opacity: 0; /* 초기 상태에서 숨김 */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 45vh;
 }
 
 .kioskSubtitle {
@@ -60,7 +68,11 @@
   font-size: 2rem;
   color: #666;
   text-align: left;
-  margin: 0;
+}
+
+/* 강조 텍스트 스타일 */
+.highlight {
+  color: white;
 }
 
 /* 반응형 조정 */
