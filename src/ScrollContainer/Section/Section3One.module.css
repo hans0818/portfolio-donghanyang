@@ -5,115 +5,108 @@
     justify-content: flex-start;
     align-items: stretch;
     gap: 50px;
-    height: 200vh;
     padding: 3% 10%;
     font-family: 'Pretendard', sans-serif;
     height: 130vh;
-  }
-  
+}
 
-
-  .developmentPeriodContainer,
-  .developmentStackContainer {
+.developmentPeriodContainer,
+.developmentStackContainer {
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30%;
-  }
+}
 
-  .projectNameContainer {
+.projectNameContainer {
     padding: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30%;
-  }
+}
 
-  .developmentPeriodContainer {
+.developmentPeriodContainer {
     padding: 0 30px;
     display: flex;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
-    height: 10%; /* 높이 유지 */
-  }
-  
-  .developmentPeriodContainer p {
-    font-size: 3rem; /* 개발 기간 텍스트의 글자 크기 */
-    margin: 0; /* 불필요한 여백 제거 */
-    font-weight: 700;
-    text-align: left; /* 텍스트 정렬 */
-  }
-  
-
-  .projectNameContainer h1 {
-    font-size: 15rem; /* 프로젝트 이름 글자 크기 */
-    font-weight: 800;
-    margin: 0; /* 기본 마진 제거 */
-  }
-  
-  .stackBox {
-    display: flex;
-    flex-direction: column; /* 수직 정렬 */
-    justify-content: flex-start; /* 글자를 위쪽으로 정렬 */
+    justify-content: flex-start;
     align-items: center;
-    padding: 5px 20px;
-    border-radius: 40px; /* 둥근 모서리 */
-    background-color: transparent; /* 투명 배경 */
-    text-align: center; /* 텍스트 정렬 */
-    flex: 1; /* 각 박스의 균일한 너비 */
-    margin: 0 1%; /* 각 박스 간의 간격 */
-    height: 100%;
-    font-size: 2rem; /* 각 스택 박스의 글자 크기 */
+    height: 10%;
+}
+
+.developmentPeriodContainer p {
+    font-size: 3rem;
+    margin: 0;
     font-weight: 700;
-    background-color: #1f1f1f;
-    padding: 5px;
+    text-align: left;
+}
+
+.projectNameContainer h1 {
+    font-size: 15rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.stackBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 40px;
+    background-color: #151515;
+    text-align: center;
+    flex: 1;
+    margin: 0 1%;
+    height: 100%;
+}
+
+.logoRow,
+.logoGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.logoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .logo {
-    width: 100px; /* 로고 크기 */
-    height: 100px;
-    margin-top: 10px; /* 로고와 텍스트 사이 간격 */
-    background-color: white;
-    align-self: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    color: #DEDEDE;
+    background: transparent;
 }
 
-.toolStackBox .logo {
-  width: 90px; /* 개발툴 로고만 크기 조정 */
-  height: 90px;
-  margin: 5px; /* 개발툴 로고 사이 간격 조정 */
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-/* development tool 전용 스타일 */
-.toolStackBox .logoGrid {
-    display: grid; /* 그리드 레이아웃 */
-    grid-template-columns: repeat(2, 1fr); /* 2x2 배치 */
-    gap: 10px; /* 로고 간 간격 */
-    margin-top: 10px; /* 텍스트와 로고 사이 간격 */
-    justify-items: center; /* 가로 가운데 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
-}
-  
-  .frontendStackBox .logoRow,
-  .backendStackBox .logoRow {
-      display: flex; /* 가로 정렬 */
-      justify-content: center; /* 가운데 정렬 */
-      align-items: center; /* 세로 정렬 */
-      gap: 10px; /* 로고 사이 간격 */
-      margin-top: 10px; /* 텍스트와 로고 사이 간격 */
-  }
-
-  .toolStackBox .logoGrid {
-    display: grid; /* 그리드 레이아웃 */
-    grid-template-columns: repeat(2, 1fr); /* 2x2 배치 */
-    gap: 10px; /* 로고 간 간격 */
-    margin-top: 10px; /* 텍스트와 로고 사이 간격 */
-    justify-items: center; /* 가로 가운데 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
+.iconText {
+    font-size: 1.2rem;
+    color: #797979;
+    font-weight: 500;
 }
 
-.problemImage {
-  align-self: flex-end; /* 이미지를 오른쪽으로 정렬 */
-  margin-right: 0; /* 오른쪽 마진 제거 */
-  margin-left: auto; /* 왼쪽 마진을 자동으로 설정하여 오른쪽 정렬 */
+.stackBox > .iconContainer,
+.stackBox > .logoRow,
+.stackBox > .logoGrid {
+    margin-top: 15px;
+}
+
+/* 스택박스 제목을 위한 새로운 클래스 */
+.stackTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #5c5c5c;
 }

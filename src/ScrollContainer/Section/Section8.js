@@ -54,7 +54,7 @@ const Section8 = () => {
           <p>
             반응형 디자인을 만들 때 뷰포트는 항상 어려웠습니다. <br />
             포기하지 않고 유튜브, 구글링으로 해당 문제 원인을 파악하고 <br />
-            rootmargin 값을 수정하여 문제를 해결했습니다.<br />
+            rootmargin 값을 수정하여 문제를 해결했습니다.<br /><br />
             이번 문제 해결로 <span className={styles.emphasis}> css, 레이아웃을 이해</span>하게 되었습니다.
           </p>
         </div>
@@ -73,7 +73,7 @@ const Section8 = () => {
           <p>
             Firebase의 경우 독학을 해야 하는 상황이라서 어려움이 많았습니다. <br />
             다행히 공식문서가 잘 되어 있어서 쉽게 따라갈 수 있었습니다. <br />
-            어떠한 문제가 발생하더라도 해결해 나갈 수 있으며<br />
+            어떠한 문제가 발생하더라도 해결해 나갈 수 있으며<br /><br />
             <span className={styles.emphasis}>필요한 정보를 찾아내는 능력</span>을 기를 수 있었습니다.
           </p>
         </div>
@@ -90,9 +90,9 @@ const Section8 = () => {
             ref={openAILogoRef}
           />
           <p>
-            LLM 모델을 활용하여 코드 작성하면서 항상 환각효과가 문제였습니다. <br />
+            LLM 모델을 활용하여 코드 작성하면서 항상 환각효과가 문제였습니다. <br /><br />
             <span className={styles.emphasis}>피그잼, 노션, 프롬프트 기법 향상</span>으로 환각효과를 해결했습니다. <br />
-            이후 어떤 라이브러리, 프레임워크라도 <span className={styles.emphasis}>자신 있게 접근</span>할 수 있게 되었습니다.
+            이후 어떤 라이브러리, 프레임워크라도 <span className={styles.emphasis}><br />자신 있게 접근</span>할 수 있게 되었습니다.
           </p>
         </div>
       </div>

@@ -190,21 +190,16 @@ const Section6Video = () => {
           <div className={styles.descriptionBox}>
             <p>
               음식점에서 테이블 키오스크의 복잡함에서 불편함을 느끼고, <br />
-              다음날 김반천국에서 메뉴 적힌 종이의 <span className={styles.highlight}>단순함이 주는 편리함</span>을 경험했습니다. <br />
-              이처럼 사용자에게 익숙하고 직관적인 환경이 얼마나 중요한지 깨달았습니다. <br />
-              이러한 대조적인 경험을 바탕으로, 복잡한 절차를 줄이고, <br />
-              누구나 쉽게 이해할 수 있는 간단한 UI를 설계했습니다. <br />
-              기존 키오스크보다 버튼의 수를 줄이고 기능은 유지했습니다.
+              다음날 김반천국에서 메뉴 적힌 종이의 <br /><span className={styles.highlight}>단순함이 주는 편리함</span>을 경험했습니다. <br />
+              이처럼 사용자에게 익숙하고 <br />직관적인 환경이 얼마나 중요한지 깨달았습니다. <br />
             </p>
           </div>
           <div className={styles.descriptionBox}>
             <p>
-              사용자가 겪는 불편함은 단순히 안 이쁜 디자인이 아니라,<br />
+              사용자가 겪는 불편함은 단순히 못 생긴 디자인이 아니라,<br />
               불필요한 과정에서 오는 스트레스라는 점을 느꼈습니다. <br />
-              제가 생각하는 좋은 어플은, 핵심 기능만을 남기고, <br />
-              <span className={styles.highlight}>직관적으로 사용자에게 필요한 정보만을 전달</span>하는 디자인입니다. <br />
-              이러한 철학을 바탕으로, 사용자의 흐름을 방해하지 않는 <br />
-              간결하고 직관적인 UI를 설계했습니다.
+              사용자가 느낀 불편함의 본질을 이해하고, <br />
+              <span className={styles.highlight}>단순하지만 효율적인 방식을 통해 문제를 해결</span>하고자 했습니다.
             </p>
           </div>
         </div>

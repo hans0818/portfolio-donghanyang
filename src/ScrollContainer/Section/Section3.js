@@ -62,7 +62,7 @@ const Section3 = () => {
     <div className={styles.section3}>
       <div className={styles.sloganContainer} ref={sloganContainerRef}>
         <p>
-          스마트폰이 나와서 편리해졌는데
+          스마트폰이 나와서 편리해졌는데 오히려
           <br />
           {' '}
           <span className={styles.highlight} ref={highlightRef}>
@@ -79,9 +79,9 @@ const Section3 = () => {
         </div>
         <div className={styles.problemTextContainer}>
           <p>
-            스마트폰이 나오고 새로운 것이 생기고 기존에 없던 편리함이 생겼습니다.
-            태블릿 키오스크가 아직도 불편하다고 생각합니다.
-            키오스크가 문제가 아니라 테블릿 자체가 주는 불편함이 불편했습니다.
+            스마트폰의 등장으로 새로운 기술과 함께 이전에 없던 편리함이 우리의 일상이 되었습니다.
+            그러나 태블릿 키오스크는 여전히 불편하다는 인식이 많습니다. <br /><br />
+            문제는 키오스크 자체가 아니라, 태블릿이라는 기기가 주는 불편함에 있다는 점을 느꼈씁니다.
           </p>
         </div>
       </div>
@@ -90,10 +90,10 @@ const Section3 = () => {
       <div className={styles.solutionContainer} ref={solutionContainerRef}>
         <div className={styles.solutionTextContainer} ref={solutionTextRef}>
           <p>
-            이번 프로젝트에서 제가 느꼇던 불편함을 개선하는 것이 목표 입니다.
-            프로그래밍에 대해서 더 깊게 이해하며 우리가 가지고 있는 익숙한 도구로 
-            기존보다 더 나은 <span className={styles.emphasize}>사용자 친화적인 UI</span>를 
-            만드는 것이 목표 입니다.
+          이번 프로젝트의 목표는 제가 경험했던 불편함을 개선하는 것입니다. 
+          익숙한 도구를 활용해 기존보다 더 나은 사용자 친화적인 UI를 만드는 동시에, 
+          프로그래밍에 대한 깊은 이해를 바탕으로 문제를 해결하고자 합니다. <br /><br />
+          <span className={styles.emphasize}>기술이 주는 편리함을 재정의하고 가능성을 탐구</span>하는 데 집중하고 있습니다.
           </p>
         </div>
         <div className={styles.solutionImageContainer}>

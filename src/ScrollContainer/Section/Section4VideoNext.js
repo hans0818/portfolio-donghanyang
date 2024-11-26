@@ -1,12 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import styles from './Section7.module.css';
+import styles from './Section4VideoNext.module.css';
 import bulbIcon from '../../assets/images/bulb.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section7 = () => {
+const Section4viedoNext = () => {
   const leftRef1 = useRef(null);
   const rightRef1 = useRef(null);
   const leftRef2 = useRef(null);
@@ -122,4 +122,4 @@ const Section7 = () => {
   );
 };
 
-export default Section7;
+export default Section4viedoNext;

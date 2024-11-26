@@ -20,70 +20,66 @@ const imagesData = [
     src: kioskMain,
     title: 'KIOSK 메인',
     description: `
-      음식을 주문할 때 가장 <span class="${styles.highlight}">필요한 요소로 UI</span>를
-      구성 했습니다.<br />      
-      메뉴, 가격이 먼저 보여서 주문하기 편하게 했습니다.
+      음식 주문에 가장 <span class="${styles.highlight}">필요한 요소</span>를 <br /> 중심으로 UI를 구성했습니다.<br />
+      메뉴와 가격을 우선적으로 보여 주문 과정을 <br />더 직관적이고 편리하게 만들었습니다.
     `,
   },
   {
     src: kioskBeverage,
     title: 'KIOSK 음료영역',
     description: `
-      토글 스위치로 메뉴, 주류(음료)를 선택 할 수 있습니다.
-      <br />
-      추가 주문이 많을 수 있는 주류(음료)는 토글스위치로 <br /><span class="${styles.highlight}">편하게 찾을 수 있게</span> UI를 구성했습니다.
-      <br />(토글 스위치 디자인 변경 예정)
+      토글 스위치를 통해 메뉴와 주류(음료)를 <br />선택할 수 있습니다.<br /><br />
+      주문 빈도가 높은 주류(음료)는 <br /><span class="${styles.highlight}">쉽게 찾을 수 있도록</span> UI를 설계했습니다.
+      <br /><br />
     `,
   },
   {
     src: kioskMenuPhoto,
     title: 'KIOSK 메뉴사진',
     description: `
-      UI를 구성할 때 <span class="${styles.highlight}">1차 정보, 2차 정보 구분</span>을 해서 <br />
-      1차 정보는 먼저 렌더링 하고 <br />2차 정보는 버튼을 눌렀을 때 렌더링합니다.<br />
-      <br /> 이미지, 텍스트 데이터가 있으면 <br /> 형관펜으로 강조를 하여 <br />
-      <span class="${styles.highlight}">사용자 경험을 향상</span> 했습니다. <br />
+      1차 정보는 먼저 렌더링하고, <br />2차 정보는 스위치 클릭 시<br />
+      표시되도록 구성했습니다.<br />
+      <br /> 이미지나 메뉴설명이 있으면 <br /> 형광펜 효과를 활용해 강조하고, <br /> <span class="${styles.highlight}">'선택과 집중'</span>을 
+      통하여 <br />사용자 경험을 향상시키는 데<br /> 중점을 두었습니다.
     `,
   },
   {
     src: kioskPreviousOrder,
     title: 'KIOSK 기본주문',
     description: `
-      메뉴 스위치를 토글 스위치 컨셉으로 <br />어떤 항목을 주문 했는지 
-      <span class="${styles.highlight}">쉽게 확인</span> 할 수 있게 <br />UI구성 했습니다.
+      메뉴 스위치는 토글 스위치 컨셉을 활용하여 <br />
+      어떤 항목을 주문했는지 <span class="${styles.highlight}">쉽게 확인</span>할 수 있도록 설계했습니다.
       <br /><br />
-      어떤 항목을 주문 했는지 확인 할 수 있습니다.
+      사용자가 주문 내역을 한눈에 파악할 수 있습니다.
     `,
   },
   {
     src: kioskOptionOrder,
     title: 'KIOSK 옵션주문',
     description: `
-      데이터에 사이즈, 맛, 토핑 항목이 있으면 <br />{' '}
-      데이터에 유무에 따라 버튼이 렌더링됩니다. <br />
-      <br /> <span class="${styles.highlight}">정말 필요한 정보에 집중</span>하여 <br /> 
-      불필요한 정보를 최대한 줄이는 방향<br />
-      으로 디자인 했습니다.
+      사이즈, 맛, 토핑 항목이 포함된 경우, <br />
+      해당 데이터에 따라 버튼이 <br />동적으로 렌더링됩니다.<br />
+      <br /> <span class="${styles.highlight}">중요한 정보에 집중</span>하고<br /> 
+      불필요한 정보를 <br />최소화하는 방향으로 디자인했습니다.
     `,
   },
   {
     src: kioskOptionSelection,
     title: 'KIOSK 옵션선택',
     description: `
-      화면에 여러 요소가 있으면 불편 했던 경험을 바탕으로 <br />
-      <span class="${styles.highlight}">필요한 정보를 집중</span>할 수 있도록 모달을 통하여 <br />
-      사용자 경험을 향상시킵니다.
+      화면에 요소가 많아 불편했던 경험을 기반으로, <br />
+      <span class="${styles.highlight}">필요한 정보에 집중</span>할 수 있도록<br />
+      모달 방식을 활용해 사용자 경험을 개선했습니다.
     `,
   },
   {
     src: kioskOrderComplete,
     title: 'KIOSK 주문완료',
     description: `
-      가능하면 <span class="${styles.highlight}">버튼 수를 최소화</span>하여 <br />
-      직관적으로 바로 버튼을 찾을 수 있게 했습니다. <br />
-      <br /> 요소를 추가하기 보다는 <br />
-      불필요한 요소를 제거하는데 집중하여 <br />
-      <span class="${styles.highlight}">누구나 쉽게 사용할 수 있도록</span> 디자인 했습니다.
+      <span class="${styles.highlight}">버튼 수를 최소화</span>하여 <br />
+      직관적으로 원하는 버튼을 <br />찾을 수 있도록 설계했습니다.<br />
+      <br /> 하지만 기존 키오스크가 제공하는 <br />필수 기능은 그대로 유지하며, <br />
+      불필요한 요소를 제거하여 <br />간결함과 편리함을 동시에 추구했습니다.
     `,
   },
 ];

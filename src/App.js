@@ -6,14 +6,15 @@ import Section3 from './ScrollContainer/Section/Section3';
 import Section3One from './ScrollContainer/Section/Section3One';
 import Section4 from './ScrollContainer/Section/Section4';
 import Section4Video from './ScrollContainer/Section/Section4Video';
+import Section4VideoNext from './ScrollContainer/Section/Section4VideoNext';
 import Section5 from './ScrollContainer/Section/Section5';
 import Section5Video from './ScrollContainer/Section/Section5Video';
 import Section6 from './ScrollContainer/Section/Section6';
 import Section6Video from './ScrollContainer/Section/Section6Video';
-import Section7 from './ScrollContainer/Section/Section7';
 import Section8 from './ScrollContainer/Section/Section8';
 import Section9 from './ScrollContainer/Section/Section9';
 import Section10 from './ScrollContainer/Section/Section10';
+
 function App() {
   return (
     <div className={styles.App}>
@@ -23,7 +24,7 @@ function App() {
       <Section3One />
       <Section4 />
       <Section4Video />
-      <Section7 />
+      <Section4VideoNext />
       <Section5 />
       <Section5Video />
       <Section6 />

@@ -16,7 +16,7 @@ const Section2Content = React.forwardRef(({ isIntroduction }, ref) => (
           기회가 보이면 놓치지 않으며<br />
           배움이 보이면 깊이 파고들고<br />
           성과가 보이면 함께 나누고<br />
-          더 나은 길이 보이면 바로 도전합니다.<br /><br />
+          가능성이 보이면 바로 도전합니다.<br /><br />
           항상 이러한 태도로 살아왔으며,<br />
           끊임없는 성장과 팀워크를 통해<br />
           <span className={styles.highlight}>가치를 더하는 개발자</span>가 되고자 합니다.
@@ -69,7 +69,7 @@ const Section2 = () => {
       },
     });
 
-    // 경력 섹션 사라짐
+    // 경력 섹션 사��짐
     tl.to(careerRef.current, {
       opacity: 0,
       duration: 1,
@@ -92,7 +92,7 @@ const Section2 = () => {
 
     // 배경색 변경
     tl.to(containerRef.current, {
-      background: 'linear-gradient(to bottom, #000003 20%, #202020 50%, #000003 80%)',
+      background: 'linear-gradient(to bottom, #000003 20%, #151515 50%, #000003 80%)',
       duration: 1,
       ease: 'power3.out',
     }, '-=1');

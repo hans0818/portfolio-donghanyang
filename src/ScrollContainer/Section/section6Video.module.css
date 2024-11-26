@@ -23,6 +23,7 @@
   max-width: 80%; /* 최대 너비 제한 */
   aspect-ratio: 11 / 19; /* 비율 유지 */
   z-index: 9999;
+  justify-self: end; /* 비디오 컨테이너를 오른쪽으로 정렬 */
 }
 
 .video {

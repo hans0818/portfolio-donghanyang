@@ -143,8 +143,8 @@ const Section4Video = () => {
             React를 통해 UI를 <span className={styles.highlight}>작은 컴포넌트 단위로 나누고 재사용</span>할 수 있어 
             개발 속도와 유지보수성을 크게 향상시킬 수 있었습니다. 
             또한, <span className={styles.highlight}>데이터 흐름을 명확히 하고</span>, 
-            상태 관리 도구를 활용해 사용자와의 상호작용을 자연스럽게 구현할 수 있었습니다. 
-            이 경험은 복잡한 프로젝트에서도 <span className={styles.highlight}>확장 가능하고 유연한 UI</span>를 
+            상태 관리 도구를 활용해 사용자와의 상호작용을 자연스럽게 구현할 수 있었습니다. <br /><br />
+            이 경험은 복잡한 프로젝트에서도 확장 가능하고 유연한 UI를
             설계할 수 있다는 자신감을 주었습니다.
           </p>
         </div>
@@ -155,8 +155,9 @@ const Section4Video = () => {
             UI를 구성하는 데 있어 핵심적인 도구임을 깨달았습니다. 
             UI는 데이터를 기반으로 렌더링되며, 데이터가 잘못되면 결국 실패한 UI로 이어질 수밖에 없습니다. <br /><br />
             사용자가 즉각적으로 데이터를 확인하고 상호작용할 수 있도록, <span className={styles.highlight}>정확하고 신뢰할 수 있는 데이터 구조 설계</span>와 
-            <span className={styles.highlight}>실시간 데이터 동기화</span>가 무엇보다 중요하다는 것을 배웠습니다. 이를 통해 사용자 경험(UX)을 극대화하기 위해 
-            데이터와 UI 간의 <span className={styles.highlight}>유기적인 연결성</span>을 지속적으로 고민하며 개발하고자 합니다.
+            <span className={styles.highlight}>실시간 데이터 동기화</span>가 무엇보다 중요하다는 것을 배웠습니다. <br /><br />
+            이를 통해 사용자 경험(UX)을 극대화하기 위해 
+            데이터와 UI 간의 유기적인 연결성을 지속적으로 고민하며 개발하고자 합니다.
           </p>
         </div>
       </div>
