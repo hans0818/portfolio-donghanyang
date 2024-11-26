@@ -9,30 +9,42 @@ const Section10 = () => {
     const highlight = highlightRef.current;
 
     if (highlight) {
+      // GSAP 타임라인 생성
+      const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
       // "가치" 텍스트의 텍스트 그림자 애니메이션
-      gsap.to(highlight, {
+      tl.to(highlight, {
         textShadow: `
-          0 0 30px rgba(255, 255, 0, 1),
-          0 0 60px rgba(255, 255, 0, 0.9),
-          0 0 90px rgba(255, 255, 0, 0.8),
-          0 0 120px rgba(255, 255, 0, 0.7)
+          0 0 20px rgba(255, 255, 255, 0.8),
+          0 0 40px rgba(255, 255, 255, 0.6),
+          0 0 60px rgba(255, 255, 255, 0.4)
         `,
-        duration: 2,
-        ease: 'power2.inOut',
-        repeat: -1,
-        yoyo: true,
-      });
+        duration: 3,
+        ease: 'sine.inOut',
+      })
+      .to(highlight, {
+        textShadow: `
+          0 0 10px rgba(255, 255, 255, 0.5),
+          0 0 20px rgba(255, 255, 255, 0.3),
+          0 0 30px rgba(255, 255, 255, 0.2)
+        `,
+        duration: 3,
+        ease: 'sine.inOut',
+      }, 0); // 동시에 애니메이션 시작
 
       // "light" 스팬의 opacity 애니메이션
       const light = highlight.querySelector(`.${styles.light}`);
       if (light) {
-        gsap.to(light, {
-          opacity: 0.8,
-          duration: 2,
-          ease: 'power2.inOut',
-          repeat: -1,
-          yoyo: true,
-        });
+        tl.to(light, {
+          opacity: 0.6,
+          duration: 3,
+          ease: 'sine.inOut',
+        }, 0) // 텍스트 그림자 애니메이션과 동시에 시작
+        .to(light, {
+          opacity: 1,
+          duration: 3,
+          ease: 'sine.inOut',
+        }, 3); // 텍스트 그림자 애니메이션과 동시에 시작
       }
     }
   }, []);
