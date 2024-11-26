@@ -184,22 +184,21 @@ const Section6Video = () => {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionheadingBox}>
             <p ref={headingRef} className={styles.heading}>
-              사용자 경험에서 답을 찾다.
+              경험에서 답을 찾다.
             </p>
           </div>
           <div className={styles.descriptionBox}>
             <p>
-              음식점에서 테이블 키오스크의 복잡함에서 불편함을 느끼고, <br />
-              다음날 김반천국에서 메뉴 적힌 종이의 <br /><span className={styles.highlight}>단순함이 주는 편리함</span>을 경험했습니다. <br />
-              이처럼 사용자에게 익숙하고 <br />직관적인 환경이 얼마나 중요한지 깨달았습니다. <br />
+              음식점 테이블 키오스크의 복잡함에서 <br /> 불편함을 느꼈지만, <br />
+              김반천국의 메뉴 적힌 종이가 주는 <br /><span className={styles.highlight}>단순함에서 편리함</span>을 경험했습니다. <br />
             </p>
           </div>
           <div className={styles.descriptionBox}>
             <p>
-              사용자가 겪는 불편함은 단순히 못 생긴 디자인이 아니라,<br />
-              불필요한 과정에서 오는 스트레스라는 점을 느꼈습니다. <br />
-              사용자가 느낀 불편함의 본질을 이해하고, <br />
-              <span className={styles.highlight}>단순하지만 효율적인 방식을 통해 문제를 해결</span>하고자 했습니다.
+              사용자의 불편은 단순히 디자인 문제가 아니라,<br />
+              불필요한 과정에서 오는 스트레스를 깨달았습니다. <br />
+              본질을 이해하고, <span className={styles.highlight}>단순하면서 효율적인 방식</span>으로<br />
+              문제를 해결하고자 했습니다.
             </p>
           </div>
         </div>

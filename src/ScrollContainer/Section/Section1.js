@@ -21,19 +21,12 @@ const Section1 = () => {
     );
   });
 
-  const sloganText = '안된다고 하면 변명이 보이고\n하려고 하면 방법이 보인다.';
+  const sloganText = '걸림돌은 넘어설 때\n디딤돌이 된다.';
 
   // 슬로건 텍스트를 각 글자별로 분리
   const splitText = sloganText.split('').map((char, index) => {
     if (char === '\n') {
       return <br key={index} />;
-    }
-    if (['변', '명', '방', '법'].includes(char)) {
-      return (
-        <span key={index} data-char className={`${styles.highlight} ${styles.textGradient}`}>
-          {char}
-        </span>
-      );
     }
     return (
       <span key={index} data-char>

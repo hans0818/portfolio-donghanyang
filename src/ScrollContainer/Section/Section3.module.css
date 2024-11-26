@@ -32,10 +32,10 @@
 
 .problemContainer,
 .solutionContainer {
-  flex: 0 0 50vh; /* 각 컨테이너가 60vh 차지 */
+  flex: 0 0 50vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 5%;
 }
 
@@ -45,6 +45,7 @@
 .solutionTextContainer {
   flex: 1;
   padding: 10px;
+  text-align: right;
 }
 
 /* 이미지 스타일 */
@@ -54,21 +55,11 @@
   height: auto;
   object-fit: contain;
   border-radius: 40px;
+  margin-left: auto;
+  display: block;
 }
 
-/* problemImage만 오른쪽 정렬 */
-.problemImage {
-  margin-left: auto; /* 왼쪽 여백을 자동으로 설정하여 오른쪽 정렬 */
-  display: block; /* 블록 레벨 요소로 설정 */
-}
-
-/* 또는 problemImageContainer를 사용하여 정렬 */
-.problemImageContainer {
-  display: flex;
-  justify-content: flex-end; /* 컨테이너 내에서 오른쪽 정렬 */
-}
-
-/* 텍스트 스타일 통일 */
+/* 텍스트 스타일 */
 .problemTextContainer p,
 .solutionTextContainer p {
   font-size: 2rem;
@@ -76,6 +67,7 @@
   line-height: 1.4;
   margin: 5px 0;
   color: #A0A0A0;
+  text-align: right;
 }
 
 .emphasize {

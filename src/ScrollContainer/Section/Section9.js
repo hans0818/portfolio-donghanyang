@@ -75,17 +75,10 @@ const Section9 = () => {
             </p>
           </div>
           <div className={styles.reflectionContainer} ref={reflectionRef}>
-            <p className={styles.reflectionText}>
-              이번 프로젝트를 진행하면서 느낀 점은{' '}
-              ‘생각하고 실천하면 다 해결되었다’는 사실입니다.
-              <br />
-              ‘과연 해결 될까?’라는 의문을 던지는 대신,{' '}<br />
-              ‘왜’라는 질문이 문제 해결에 큰
-              도움이 되었습니다.
-              <br /><br />
-              또한 ,문제점을 해결하고 기능을 하나하나 추가할 때마다{' '}
-              <span className={styles.highlight}>‘코딩의 가능성과 무한한 잠재력’</span>을 다시 한번
-              실감했습니다.
+            <h2>생각보다 실천</h2>
+            <p className={styles.reflectionText}>                        
+              '과연 될까?'라는 의문 대신 <br />'왜'라는 질문이 문제 해결의 열쇠가 되었고, <br />
+              기능을 추가할 때마다 <br /><span className={styles.highlight}>코딩의 가능성과 무한한 잠재력</span>을 실감했습니다.
             </p>
           </div>
         </div>
