@@ -11,25 +11,28 @@ const Section8 = () => {
   const openAILogoRef = useRef(null);
 
   useEffect(() => {
+    // 이미지 스케일 애니메이션 (잔잔하게 조정)
     gsap.to(viewportImageRef.current, {
-      scale: 1.1,
-      duration: 1.5,
+      scale: 1.05, // 스케일 증가 폭 축소
+      duration: 2, // 애니메이션 지속 시간 연장
       ease: 'power1.inOut',
       repeat: -1,
       yoyo: true,
     });
 
+    // Firebase 로고 회전 애니메이션 (잔잔하게 조정)
     gsap.to(firebaseLogoRef.current, {
-      rotation: 30,
-      duration: 2,
+      rotation: 15, // 회전 각도 축소
+      duration: 2, // 애니메이션 지속 시간 연장
       ease: 'power1.inOut',
       repeat: -1,
       yoyo: true,
     });
 
+    // OpenAI 로고 이동 애니메이션 (잔잔하게 조정)
     gsap.to(openAILogoRef.current, {
-      x: 10,
-      duration: 0.5,
+      x: 5, // 이동 거리 축소
+      duration: 1, // 애니메이션 지속 시간 연장
       ease: 'power1.inOut',
       repeat: -1,
       yoyo: true,

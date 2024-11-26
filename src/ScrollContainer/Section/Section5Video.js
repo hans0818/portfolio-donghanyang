@@ -138,7 +138,7 @@ const Section5Video = () => {
 
         <div className={styles.textSection2}>
           <p>
-            제 프로젝트에서 중요한 핵심은 <span className={styles.highlight}>효율적인 압축</span> 입니다.<br /><br />
+            제 프로젝트에서 중요한 핵심은 <span className={styles.highlight}>효율적인 압축</span> 입니다.<br />
             첫번째로 <span className={styles.highlight}>단순함이 주는 편리함</span> 입니다. <br />
             하나의 화면에 너무 많은 것을 담는 것을 피했습니다.<br />
             두번째는 사용자가<span className={styles.highlight}>경험으로 UI를 익히는 것</span>입니다. <br /> 

@@ -163,7 +163,7 @@ const Section6 = () => {
           currentDescription,
           {
             opacity: 0,
-            y: -150, // 위로 이동
+            y: -200, // 위로 이동
             duration: 1.5, // 지속 시간 늘림
             ease: 'power3.inOut',
           },
@@ -175,7 +175,7 @@ const Section6 = () => {
           nextDescription,
           {
             opacity: 0,
-            y: 150, // 아래에서 시작
+            y: 200, // 아래에서 시작
           },
           {
             opacity: 1,

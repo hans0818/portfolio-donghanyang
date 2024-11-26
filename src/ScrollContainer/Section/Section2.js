@@ -27,6 +27,7 @@ const Section2Content = React.forwardRef(({ isIntroduction }, ref) => (
         <p>1991.08.18</p>
         <p>Full stack Developer</p>
         <p>donghany0818@naver.com</p>
+        <p>010-4338-9118</p>
         <p>부경대학교 소방공학과(중퇴)</p>
         <hr className={styles.divider} />
         <p>2018.02 ~ 2019.06 동양생명 영업팀장</p>

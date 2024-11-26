@@ -69,7 +69,7 @@ const Section4viedoNext = () => {
   return (
     <div className={styles.techFeaturesSection}>
       <div ref={leftRef1} className={styles.techFeaturesContainerLeft} data-direction="left">
-      <h2 className={styles.sectionHeader}>React와 firebase 활용</h2>
+      <h2 className={styles.sectionHeader}>React와 Firebase 활용</h2>
 
         <ul>
           <li>
