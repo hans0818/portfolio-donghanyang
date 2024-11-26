@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-donghanyang/static/css/main.2ce19a13.css",
-    "main.js": "/portfolio-donghanyang/static/js/main.f137126d.js",
+    "main.css": "/portfolio-donghanyang/static/css/main.eee8e00d.css",
+    "main.js": "/portfolio-donghanyang/static/js/main.c8fb4cd7.js",
     "static/js/453.66640a8f.chunk.js": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js",
     "static/media/donghanImage.png": "/portfolio-donghanyang/static/media/donghanImage.b8c0f78c1a8135a86adc.png",
     "static/media/시스템 시연영상.mp4": "/portfolio-donghanyang/static/media/시스템 시연영상.18584aa336d8ce72ada0.mp4",
@@ -28,12 +28,12 @@
     "static/media/firebase.svg": "/portfolio-donghanyang/static/media/firebase.538fe50440d82bb7015cf74dd3d723e6.svg",
     "static/media/openai.svg": "/portfolio-donghanyang/static/media/openai.3040c1fa215529d2f81d27464c49008d.svg",
     "index.html": "/portfolio-donghanyang/index.html",
-    "main.2ce19a13.css.map": "/portfolio-donghanyang/static/css/main.2ce19a13.css.map",
-    "main.f137126d.js.map": "/portfolio-donghanyang/static/js/main.f137126d.js.map",
+    "main.eee8e00d.css.map": "/portfolio-donghanyang/static/css/main.eee8e00d.css.map",
+    "main.c8fb4cd7.js.map": "/portfolio-donghanyang/static/js/main.c8fb4cd7.js.map",
     "453.66640a8f.chunk.js.map": "/portfolio-donghanyang/static/js/453.66640a8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ce19a13.css",
-    "static/js/main.f137126d.js"
+    "static/css/main.eee8e00d.css",
+    "static/js/main.c8fb4cd7.js"
   ]
 }
